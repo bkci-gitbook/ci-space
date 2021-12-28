@@ -4,9 +4,10 @@
 
 ## 总览
 
-* [客户基本情况](zong-lan/ke-hu-ji-ben-qing-kuang.md)
-* [基本使用](zong-lan/ji-ben-shi-yong.md)
-* [FAQ](zong-lan/faq.md)
+* [FAQ](zong-lan/faq/README.md)
+  * [蓝盾FAQ](zong-lan/faq/lan-dun-faq.md)
+  * [代码检查FAQ](zong-lan/faq/dai-ma-jian-cha-faq.md)
+  * [编译加速FAQ](zong-lan/faq/bian-yi-jia-su-faq.md)
 * [已知问题](zong-lan/yi-zhi-wen-ti.md)
 
 ## 增值服务
@@ -34,10 +35,3 @@
 
 * [docker in docker](liu-shui-xian-ding-zhi-hua-fang-an/docker-in-docker.md)
 * [docker registry](liu-shui-xian-ding-zhi-hua-fang-an/docker-registry.md)
-
-## 标准化部署
-
-* [蓝鲸部署](biao-zhun-hua-bu-shu/lan-jing-bu-shu.md)
-* [蓝盾部署](biao-zhun-hua-bu-shu/lan-dun-bu-shu.md)
-* [codecc部署](biao-zhun-hua-bu-shu/codecc-bu-shu.md)
-* [编译加速部署](biao-zhun-hua-bu-shu/bian-yi-jia-su-bu-shu.md)

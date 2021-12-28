@@ -30,16 +30,16 @@ Here are a couple of examples of succinct overviews from products with really gr
 
 Follow our handy guides to get started on the basics as quickly as possible:
 
-{% content-ref url="zong-lan/faq.md" %}
-[faq.md](zong-lan/faq.md)
+{% content-ref url="zong-lan/faq/" %}
+[faq](zong-lan/faq/)
 {% endcontent-ref %}
 
 {% content-ref url="zong-lan/yi-zhi-wen-ti.md" %}
 [yi-zhi-wen-ti.md](zong-lan/yi-zhi-wen-ti.md)
 {% endcontent-ref %}
 
-{% content-ref url="zong-lan/ke-hu-ji-ben-qing-kuang.md" %}
-[ke-hu-ji-ben-qing-kuang.md](zong-lan/ke-hu-ji-ben-qing-kuang.md)
+{% content-ref url="broken-reference" %}
+[Broken link](broken-reference)
 {% endcontent-ref %}
 
 {% hint style="info" %}

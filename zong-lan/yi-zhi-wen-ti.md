@@ -1,5 +1,20 @@
 # 已知问题
 
-{% hint style="info" %}
-**Good to know:** your product docs aren't just a reference of all your features! use them to encourage folks to perform certain actions and discover the value in your product.
-{% endhint %}
+\[TOC]
+
+#### 用户组和用户自定义权限重叠导致用户对流水线的权限不符合预期，ci <1.7
+
+#### **出现版本：ci<1.7**&#x20;
+
+偶现/必现：必现&#x20;
+
+描述：用户所在的用户组拥有「test」项目全部权限，同时用户自定义权限有「test项目」部分流水线权限，进入流水线页面，**概率性**出现无法查看流水线的情况  &#x20;
+
+![可以查看流水线](<../.gitbook/assets/image (9).png>)
+
+![无法查看流水线](<../.gitbook/assets/image (6).png>)
+
+issue链接:
+
+
+
