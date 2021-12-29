@@ -8,6 +8,7 @@
   * [蓝盾FAQ](zong-lan/faq/lan-dun-faq.md)
   * [代码检查FAQ](zong-lan/faq/dai-ma-jian-cha-faq.md)
   * [编译加速FAQ](zong-lan/faq/bian-yi-jia-su-faq.md)
+  * [蓝鲸FAQ](zong-lan/faq/lan-jing-faq.md)
 * [已知问题](zong-lan/yi-zhi-wen-ti.md)
 
 ## 增值服务
