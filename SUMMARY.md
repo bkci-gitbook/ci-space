@@ -21,11 +21,11 @@
 ## 实践案例
 
 * [流水线](shi-jian-an-li/liu-shui-xian/README.md)
-  * [Figma Integration](shi-jian-an-li/liu-shui-xian/figma-integration.md)
+  * [使用案例](shi-jian-an-li/liu-shui-xian/shi-yong-an-li.md)
 * [代码检查](shi-jian-an-li/dai-ma-jian-cha/README.md)
-  * [GitHub Integration](shi-jian-an-li/dai-ma-jian-cha/github-integration.md)
+  * [代码检查使用案例](shi-jian-an-li/dai-ma-jian-cha/dai-ma-jian-cha-shi-yong-an-li.md)
 * [编译加速](shi-jian-an-li/bian-yi-jia-su/README.md)
-  * [Intercom Integration](shi-jian-an-li/bian-yi-jia-su/intercom-integration.md)
+  * [编译加速使用案例](shi-jian-an-li/bian-yi-jia-su/bian-yi-jia-su-shi-yong-an-li.md)
 
 ## 插件
 
