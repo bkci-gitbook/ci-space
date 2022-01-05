@@ -362,7 +362,7 @@ cd ${CTRL\_DIR:-/data/install}
 
 ![](<../../.gitbook/assets/image (12).png>)
 
-{% embed url="https://github.com/ci-plugins/executeJobScript" %}
+job脚本执行插件链接：[https://github.com/TencentBlueKing/ci-executeJobScript](https://github.com/TencentBlueKing/ci-executeJobScript)
 
 ![](<../../.gitbook/assets/image (4).png>)
 
