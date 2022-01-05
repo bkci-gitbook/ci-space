@@ -176,7 +176,7 @@ BKCI这边推送镜像默认都走https，如果要走http需要把仓库域名�
 
 #### Q: 哪里可以查看上传到 制品库 的jar包？使用默认方式&#x20;
 
-{% embed url="https://bk.tencent.com/s-mart/community/question/2380" %}
+蓝鲸社区参考：[https://bk.tencent.com/s-mart/community/question/2380](https://bk.tencent.com/s-mart/community/question/2380)
 
 #### Q:gitlab事件触发插件无法触发事件
 
