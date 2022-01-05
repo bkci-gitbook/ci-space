@@ -1,3 +1,7 @@
+---
+coverY: 0
+---
+
 # 蓝盾FAQ
 
 \[TOC]
@@ -12,7 +16,7 @@
 
 进度条是蓝盾前端根据流水线相关的数据做出的预估。此进度不是准确的时间，仅供参考。&#x20;
 
-![](<../../.gitbook/assets/image (3) (1).png>)
+![](../../.gitbook/assets/进度条.png)
 
 #### Q: 蓝盾流水线构建出的产物如何支持服务器分发限速配置?
 
@@ -364,8 +368,8 @@ cd ${CTRL\_DIR:-/data/install}
 
 job脚本执行插件链接：[https://github.com/TencentBlueKing/ci-executeJobScript](https://github.com/TencentBlueKing/ci-executeJobScript)
 
-![](<../../.gitbook/assets/image (4).png>)
-
 私有配置缺少JOB\_HOST字段，按照上图配置好即可
 
-####
+![](../../.gitbook/assets/脚本执行配置1.png)
+
+![](../../.gitbook/assets/脚本执行配置1.png)
