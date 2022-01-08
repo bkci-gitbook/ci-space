@@ -34,7 +34,7 @@ coverY: 0
 
 ![](<../../.gitbook/assets/image (2).png>)
 
-![](<../../.gitbook/assets/image (5) (1).png>)
+![](<../../.gitbook/assets/image (5) (1) (1).png>)
 
 #### Q: 流水线执行失败了，插件为什么没有重试按钮？
 
