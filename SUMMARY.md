@@ -4,7 +4,8 @@
 
 ## 总览
 
-* [蓝盾培训文档](zong-lan/lan-dun-pei-xun-wen-dang.md)
+* [蓝盾使用文档](zong-lan/lan-dun-shi-yong-wen-dang.md)
+* [代码检查使用文档](zong-lan/dai-ma-jian-cha-shi-yong-wen-dang.md)
 * [FAQ](zong-lan/faq/README.md)
   * [蓝盾FAQ](zong-lan/faq/lan-dun-faq.md)
   * [代码检查FAQ](zong-lan/faq/dai-ma-jian-cha-faq.md)
