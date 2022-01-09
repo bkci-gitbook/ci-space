@@ -124,7 +124,7 @@ setEnv 设置的是当前bash的输出参数，在下游才会生效，当前的
 
 查看对应微服务日志 /data/bkce/logs/ci/log/
 
-![](<../../.gitbook/assets/image (17).png>)
+![](<../../.gitbook/assets/image (17) (1).png>)
 
 一个index占了12个shards，超过了es7 设置的shards最大值，这是es7的限制
 
@@ -158,7 +158,7 @@ curl -s -u elastic:$BK\_ES7\_ADMIN\_PASSWORD -X DELETE http://$BK\_ES7\_IP:9200/
 
 #### Q:上传镜像报错，程序默认把http方式换成https了
 
-![](<../../.gitbook/assets/image (3).png>)
+![](<../../.gitbook/assets/image (3) (1).png>)
 
 docker默认是https的, 这个要改服务端的docker. 需要在dockerhost机器的/etc/docker/daemon.json添加insecure-registry.
 
@@ -204,7 +204,7 @@ windows下，agent无法拉起有UI界面的exe
 
 #### Q: failed to connect to gitlib.xxx.com port 443:connection timed out 构建失败 提示连接443端口超时
 
-![](<../../.gitbook/assets/image (13).png>)
+![](<../../.gitbook/assets/image (13) (1).png>)
 
 这里断网的原因是dockerhost启动后, 执行过sysctl -p等价的命令, 导致 net.ipv4.ip\_forward 被重置为0, 导致容器断网.&#x20;
 
@@ -364,7 +364,7 @@ cd ${CTRL\_DIR:-/data/install}
 
 #### Q: private configuration of key JOB\_HOST is missing
 
-![](<../../.gitbook/assets/image (12).png>)
+![](<../../.gitbook/assets/image (12) (1).png>)
 
 job脚本执行插件链接：[https://github.com/TencentBlueKing/ci-executeJobScript](https://github.com/TencentBlueKing/ci-executeJobScript)
 
@@ -372,4 +372,51 @@ job脚本执行插件链接：[https://github.com/TencentBlueKing/ci-executeJobS
 
 ![](../../.gitbook/assets/脚本执行配置1.png)
 
-![](../../.gitbook/assets/脚本执行配置1.png)
+#### Q: 发送邮件插件不可用
+
+![](../../.gitbook/assets/企业微信截图\_16408694122894.png)
+
+插件的执行环境分为有编译和无编译，发送邮件插件的执行环境为无编译环境，在创建Job的步骤时，需要选Job类型为无编译环境，即Agentless
+
+![](<../../.gitbook/assets/image (12).png>)
+
+![](<../../.gitbook/assets/image (3).png>)
+
+#### Q: 发送邮件插件执行成功，但没收到邮件
+
+邮件发送需要先配置ESB，请参考：[https://bk.tencent.com/s-mart/community/question/2532](https://bk.tencent.com/s-mart/community/question/2532)
+
+#### Q: 发送邮件插件的sender配置不是我配置的sender
+
+![](<../../.gitbook/assets/image (17).png>)
+
+sender需要在插件的「私有配置」里设置，独立于ESB的mail\_sender
+
+「研发商店」-「流水线插件」-「工作台」-「选择发送邮件插件」-「基本设置」-「私有配置」-「增加sender字段」
+
+![](../../.gitbook/assets/wecom-temp-de1f999781431e708256b5e9a9ecc1d6.png)
+
+![](../../.gitbook/assets/wecom-temp-79503b33558fb2f05c4579c99280f8e7.png)
+
+![](../../.gitbook/assets/wecom-temp-ad2da5032b4af609e41012bd4113bf84.png)
+
+![](../../.gitbook/assets/wecom-temp-888da4cdb34f2bbcdc3869f7f4ff6dda.png)
+
+![](../../.gitbook/assets/wecom-temp-8f040f0a22d3e9b0ff75a6b3ff40410b.png)
+
+![](../../.gitbook/assets/wecom-temp-db0217ab76483f286bfb63cd7047f353.png)
+
+除了sender字段，还需要配置其他字段，请参考：[https://github.com/TencentBlueKing/ci-sendEmail](https://github.com/TencentBlueKing/ci-sendEmail)
+
+#### Q: 配置平台里的业务，如何关联到容器管理平台？
+
+![](../../.gitbook/assets/企业微信截图\_16412880662873.png)
+
+![](../../.gitbook/assets/企业微信截图\_16412881057362.png)
+
+
+
+1. 权限中心中检查，该用户账号是否具有local-k8s」的配置平台权限
+2. 配置平台中检查，「资源-业务-运维人员」中是否有配置该账号用户
+
+![](../../.gitbook/assets/wecom-temp-ac68ebc38b2022819c8540b00100d2fb.png)
