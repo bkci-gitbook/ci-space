@@ -2,7 +2,7 @@
 
 * [导 言](README.md)
 
-## 总览
+## 总 览
 
 * [蓝盾使用文档](zong-lan/lan-dun-shi-yong-wen-dang.md)
 * [代码检查使用文档](zong-lan/dai-ma-jian-cha-shi-yong-wen-dang.md)
