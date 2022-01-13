@@ -74,13 +74,13 @@ https://iwiki.woa.com/pages/viewpage.action?pageId=26941983
 
 #### Q: 怎么在bash插件之间传递变量，上一个bash插件输出变量，下一个bash插件能引用到？
 
-蓝盾为bash插件提供了 setEnv 命令来设置蓝盾的全局变量, setEnv '变量名' '变量值' 如：
+蓝盾为bash插件提供了 setEnv 命令来设置蓝盾的全局变量, `setEnv '变量名' '变量值'` 如：
 
-setEnv 'cmdb' '3.2.16'
+`setEnv 'cmdb' '3.2.16'`
 
 setEnv 设置的是当前bash的输出参数，在下游才会生效，当前的bash里打印不出来的。
 
-在windows batchscript插件里使用call:setEnv "FILENAME" "package.zip" 然后在后续的batchscript插件中使用%FILENAME%引用这个变量
+在windows batchscript插件里使用`call:setEnv "FILENAME" "package.zip"` 然后在后续的batchscript插件中使用%FILENAME%引用这个变量
 
 #### Q: 节点机器，显示正常，为什么监控网络io没有数据？
 
@@ -90,17 +90,13 @@ setEnv 设置的是当前bash的输出参数，在下游才会生效，当前的
 
 如果要启用:
 
-配置 bin/03-userdef/ci.env 添加 BK\_CI\_ENVIRONMENT\_AGENT\_COLLECTOR\_ON=true
-
-然后添加 influxdb相关的配置项.
-
-重新安装ci-environment. 可以直接使用 ./bk\_install ci 安装.
-
-修改已有agent:
-
-编辑.agent.properties , 配置devops.agent.collectorOn=true
-
-重启agent.
+```
+1. 配置 bin/03-userdef/ci.env 
+2. 添加 BK_CI_ENVIRONMENT_AGENT_COLLECTOR_ON=true
+3. 然后添加 influxdb相关的配置项.
+4. 重新安装ci-environment. 可以直接使用 ./bk_install ci 安装.
+5. 修改已有agent:编辑.agent.properties , 配置devops.agent.collectorOn=true, 重启agent.
+```
 
 #### Q: 有方法可以从标准运维调用蓝盾吗？
 
@@ -128,21 +124,18 @@ setEnv 设置的是当前bash的输出参数，在下游才会生效，当前的
 
 解决方法：清理一些无用的索引
 
+```
 查看目前所有的索引
-
 source /data/install/utils.fc
-
-curl -s -u elastic:$BK\_ES7\_ADMIN\_PASSWORD -X GET http://$BK\_ES7\_IP:9200/\_cat/indices?v
-
+curl -s -u elastic:$BK_ES7_ADMIN_PASSWORD -X GET http://$BK_ES7_IP:9200/_cat/indices?v
 删除索引 # index 是索引名称
-
-curl -s -u elastic:$BK\_ES7\_ADMIN\_PASSWORD -X DELETE http://$BK\_ES7\_IP:9200/index
-
-\# 注意：不能删除 .security-7
+curl -s -u elastic:$BK_ES7_ADMIN_PASSWORD -X DELETE http://$BK_ES7_IP:9200/index
+# 注意：不能删除 .security-7
+```
 
 ![](<../../.gitbook/assets/image (16).png>)
 
-另一种可能是用户未安装es7
+**另一种可能是用户未安装es7**
 
 #### Q:公共构建机，这几类都支持吗？
 
@@ -206,31 +199,21 @@ windows下，agent无法拉起有UI界面的exe
 
 这里断网的原因是dockerhost启动后, 执行过sysctl -p等价的命令, 导致 net.ipv4.ip\_forward 被重置为0, 导致容器断网.&#x20;
 
-sysctl -p | grep -F net.ipv4.ip\_forward
-
-net.ipv4.ip\_forward = 0
-
+```
+sysctl -p | grep -F net.ipv4.ip_forward
+net.ipv4.ip_forward = 0
 单独启动一个测试容器:
-
-docker run -it --rm centos&#x20;
-
+docker run -it --rm centos 
 应该会看到
-
 WARNING: IPv4 forwarding is disabled. Networking will not work.
-
 容器内执行命令, 等待后会看到提示超时:
-
 curl -m 3 -v paas.service.consul
-
 然后执行 systemctl restart bk-ci-docker-dns-redirect
-
 单独启动一个测试容器:
-
-docker run -it --rm centos&#x20;
-
+docker run -it --rm centos 
 容器内执行命令, 可以看到网络恢复:
-
 curl -v paas.service.consul
+```
 
 #### Q:agent里面需要连网下docker，服务器连不了网，要怎么处理呢？
 
@@ -254,9 +237,7 @@ curl -v paas.service.consul
 
 这个需要维护一个NFS共享存储服务，不太推荐使用了，后续有可能移除
 
-最好的做法是，将依赖工具打包到镜像里
-
-有2个阶段&#x20;
+最好的做法是，将依赖工具打包到镜像里，有2个阶段&#x20;
 
 阶段A 里面的 job 有个 task-A ：是克隆git 代码后构建编译打包jar
 
@@ -298,33 +279,22 @@ curl -v paas.service.consul
 
 原因是集群初始配置失败，但脚本并没有终止
 
+```
 ci初始化
-
 reg ci-auth callback.
-
-\[1] 19:29:00 \[SUCCESS] 172.16.1.49
-
+[1] 19:29:00 [SUCCESS] 172.16.1.49
 {
-
-&#x20; "timestamp" : 1626291190535,
-
-&#x20; "status" : 500,
-
-&#x20; "error" : "Internal Server Error",
-
-&#x20; "message" : "",
-
-&#x20; "path" : "/api/op/auth/iam/callback/"
-
-}Stderr: \* About to connect() to localhost port 21936 (#0)
-
+  "timestamp" : 1626291190535,
+  "status" : 500,
+  "error" : "Internal Server Error",
+  "message" : "",
+  "path" : "/api/op/auth/iam/callback/"
+}Stderr: * About to connect() to localhost port 21936 (#0)
 解决方法：可尝试手动 注册ci-auth的回调.
-
-source /data/install/load\_env.sh
-
-iam\_callback="support-files/ms-init/auth/iam-callback-resource-registere.conf"
-
-./pcmd.sh -H "$BK\_CI\_AUTH\_IP0" curl -vsX POST "http://localhost:$BK\_CI\_AUTH\_API\_PORT/api/op/auth/iam/callback/" -H "Content-Type:application/json" -d @${BK\_PKG\_SRC\_PATH:-/data/src}/ci/support-files/ms-init/auth/iam-callback-resource-registere.conf
+source /data/install/load_env.sh
+iam_callback="support-files/ms-init/auth/iam-callback-resource-registere.conf"
+./pcmd.sh -H "$BK_CI_AUTH_IP0" curl -vsX POST "http://localhost:$BK_CI_AUTH_API_PORT/api/op/auth/iam/callback/" -H "Content-Type:application/json" -d @${BK_PKG_SRC_PATH:-/data/src}/ci/support-files/ms-init/auth/iam-callback-resource-registere.conf
+```
 
 #### Q: Upload artifacts这个上传功能是上传到当前使用stage的构建的构建机里面还是有单独的仓库位置&#x20;
 
@@ -346,19 +316,15 @@ CI 的归档，是将产物暂存到仓库，方便流水线下游操作使用�
 
 旧sql没有清理的缘故
 
-\# 清理flag文件, 重新导入全部sql文件
-
-for sql\_flag in $HOME/.migrate/\*\_ci\_\*.sql; do
-
-chattr -i "$sql\_flag" && rm "$sql\_flag"
-
+```
+# 清理flag文件, 重新导入全部sql文件
+for sql_flag in $HOME/.migrate/*_ci_*.sql; do
+chattr -i "$sql_flag" && rm "$sql_flag"
 done
-
-\# 导入数据库 SQL 仅在中控机执行
-
-cd ${CTRL\_DIR:-/data/install}
-
-./bin/sql\_migrate.sh -n mysql-ci /data/src/ci/support-files/sql/\*.sql
+# 导入数据库 SQL 仅在中控机执行
+cd ${CTRL_DIR:-/data/install}
+./bin/sql_migrate.sh -n mysql-ci /data/src/ci/support-files/sql/*.sql
+```
 
 #### Q: private configuration of key JOB\_HOST is missing
 

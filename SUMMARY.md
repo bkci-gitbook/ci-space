@@ -38,7 +38,3 @@
 
 * [docker in docker](liu-shui-xian-ding-zhi-hua-fang-an/docker-in-docker.md)
 * [docker registry](liu-shui-xian-ding-zhi-hua-fang-an/docker-registry.md)
-
-## Group 1
-
-* [Page 1](group-1/page-1.md)
