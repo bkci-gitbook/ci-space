@@ -175,31 +175,48 @@
 
 添加Download artifacts插件，会根据填写好的内容自动找到制品库的源路径，然后下载到当前工作空间
 
+![](../.gitbook/assets/image-20211209203143751.png)
+
 #### 示例二（流水线触发方式使用-手动执行/定时任务/远程触发等）
 
 触发方式是在Trigger下通过选择不同类型的插件使用
 
 *   手动执行
 
-    创建流水线默认的触发方式为手动执行，这里简单添加一个stage
-
+    创建流水线默认的触发方式为手动执行，这里简单添加一个stage\
     Manual插件：手动执行流水线，指流水线建立之后，可以在右上角点击保存，并且手动点击执行流水线的按钮
+
+![](../.gitbook/assets/image-20211209205014251.png)
+
 *   定时任务
 
     添加Timer插件，定义crontab表达式
 
-    因为没有选择Manual手动触发的方式，所以无法手动点击【执行】按钮来执行流水线
+![](../.gitbook/assets/image-20211209211036492.png)
 
-    查看执行历史，可以看到流水线以每分钟自动定时执行一次
+因为没有选择Manual手动触发的方式，所以无法手动点击【执行】按钮来执行流水线
+
+![](../.gitbook/assets/image-20211209211118734.png)
+
+查看执行历史，可以看到流水线以每分钟自动定时执行一次
+
+![](../.gitbook/assets/image-20211209211239418.png)
+
 *   远程触发
 
     添加Remote插件--可以通过执行命令进行远程触发
 
     复制示例命令，如果trigger有定义变量的话，命令行会自动生成含变量参数的示例
 
-    命令行中执行curl命令
+![](../.gitbook/assets/image-20211209211650003.png)
 
-    流水线执行历史上可以查看到执行记录
+命令行中执行curl命令
+
+![](<../.gitbook/assets/image-20211209211620739 (1).png>)
+
+流水线执行历史上可以查看到执行记录
+
+![](../.gitbook/assets/image-20211209211547148.png)
 
 #### 示例三（流水线变量使用）
 
@@ -207,25 +224,52 @@
   * 全局变量引用，shell/python/windows变量引用方法
   * 插件变量设置方法以及跨插件变量引用
 * 点击Trigger，新增变量message
-*   添加stage，Job下选择Python脚本执行插件，通过${message}使用变量
 
-    添加shell插件，使用${message}使用变量
+![](<../.gitbook/assets/image-20211210111540640 (1).png>)
 
-    添加stage，Job类型选择windows
+* 添加stage，Job下选择Python脚本执行插件，通过${message}使用变量
 
-    点击windows，选择windows私有构建机节点
+![](../.gitbook/assets/image-20211210111540640.png)
 
-    添加Batch Script插件，使用%message%引用变量
+添加shell插件，使用${message}使用变量
+
+![](../.gitbook/assets/image-20211212170436642.png)
+
+添加stage，Job类型选择windows
+
+![](../.gitbook/assets/image-20211212170545118.png)
+
+点击windows，选择windows私有构建机节点
+
+![](../.gitbook/assets/image-20211212170801357.png)
+
+添加Batch Script插件，使用%message%引用变量
+
+![](../.gitbook/assets/image-20211212171003864.png)
+
 *   插件设置全局变量方法
 
     在python脚本执行插件上，使用print("setEnv demo test1")，即设置了一个环境变量：demo（注：demo变量不能在当前插件使用）
 
-    在shell script以及batch script插件引用变量demo，跟trigger配置的变量引用的方式一样
+![](../.gitbook/assets/image-20211212171417261.png)
 
-    windows设置全局变量的方式，call:setEnv "test" "testmessage"，引用test变量的方式如上
+在shell script以及batch script插件引用变量demo，跟trigger配置的变量引用的方式一样
+
+![](../.gitbook/assets/image-20211212171708729.png)
+
+![](<../.gitbook/assets/image-20211212171725307 (1).png>)
+
+windows设置全局变量的方式，call:setEnv "test" "testmessage"，引用test变量的方式如上
+
+![](../.gitbook/assets/image-20211212172006260.png)
+
 *   流水线默认全局变量
 
     点击任意插件，右上角有一个引用变量，流水线默认定义了一些变量，可以直接在插件上进行使用，变量引用方式如上
+
+![](../.gitbook/assets/image-20211212172109877.png)
+
+
 
 #### 示例四（使用模板创建流水线）
 
