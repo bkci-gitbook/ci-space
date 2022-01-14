@@ -249,7 +249,7 @@ curl -v paas.service.consul
 
 #### Q: 研发商店：插件配置文件\[task.json]atomCode字段与工作台录入的不一致
 
-![](<../../.gitbook/assets/image (10).png>)
+![](<../../.gitbook/assets/image (10) (1).png>)
 
 上传的，可能不是插件发布包，是源代码。发布过程看插件的readme
 
