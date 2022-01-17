@@ -84,7 +84,7 @@ setEnv 设置的是当前bash的输出参数，在下游才会生效，当前的
 
 #### Q: 节点机器，显示正常，为什么监控网络io没有数据？
 
-![](<../../.gitbook/assets/image (9).png>)
+![](<../../.gitbook/assets/image (9) (1).png>)
 
 没有启用. 这个监控并无意义, 也不影响调度. 建议使用蓝鲸监控等专门的监控系统负责.
 
@@ -149,7 +149,7 @@ curl -s -u elastic:$BK_ES7_ADMIN_PASSWORD -X DELETE http://$BK_ES7_IP:9200/index
 
 #### Q:上传镜像报错，程序默认把http方式换成https了
 
-![](<../../.gitbook/assets/image (3) (1).png>)
+![](<../../.gitbook/assets/image (3) (1) (1).png>)
 
 docker默认是https的, 这个要改服务端的docker. 需要在dockerhost机器的/etc/docker/daemon.json添加insecure-registry.
 
@@ -344,7 +344,7 @@ job脚本执行插件链接：[https://github.com/TencentBlueKing/ci-executeJobS
 
 ![](<../../.gitbook/assets/image (12).png>)
 
-![](<../../.gitbook/assets/image (3).png>)
+![](<../../.gitbook/assets/image (3) (1).png>)
 
 #### Q: 发送邮件插件执行成功，但没收到邮件
 
@@ -384,3 +384,13 @@ sender需要在插件的「私有配置」里设置，独立于ESB的mail\_sende
 2. 配置平台中检查，「资源-业务-运维人员」中是否有配置该账号用户
 
 ![](../../.gitbook/assets/wecom-temp-ac68ebc38b2022819c8540b00100d2fb.png)
+
+#### Q: 怎么使用Merge-Request-Accept-Hook，我的怎么没触发？我希望分支feature\_lzj\_test123123213合并到feature\_lzj\_test0117时触发流水线
+
+![](<../../.gitbook/assets/image (9).png>)
+
+Merge Request Accept Hook会在源分支**成功merge到目标分支时触发**
+
+比如，需要将feat\_1合并到dev分支时，分支名称写dev，监听源分支写feat\_1（也可以使用\*号的模糊匹配功能，如feat\_\*）
+
+![](<../../.gitbook/assets/wecom-temp-77022522a713e11b1639080648ca3403 (1).png>)
