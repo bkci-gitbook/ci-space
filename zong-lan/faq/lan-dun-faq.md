@@ -159,7 +159,7 @@ BKCI这边推送镜像默认都走https，如果要走http需要把仓库域名�
 
 #### Q:no available Docker VM
 
-![](<../../.gitbook/assets/image (11).png>)
+![](<../../.gitbook/assets/image (11) (1).png>)
 
 是没有可用的ci-dockerhost.需要:
 
@@ -620,4 +620,162 @@ curl -X GET [https://devops.bktencent.com/prod/v3/apigw-app/projects/](https://d
 ![](../../.gitbook/assets/image-20220210194131021.png)
 
 ![](../../.gitbook/assets/image-20220210194135210.png)
+
+**Q: 如果我想通过shell或者bat执行一个python任务，那么蓝盾的变量我只有通过python命令行透传进去嘛,而且无法将变量回写到蓝盾？**
+
+问题一：可以通过获取环境变量的方式来获取蓝盾的变量
+
+```
+ # 单行python例子，var为用户在本步骤或者其他步骤定义的变量名，BK_CI_START_USER_NAME是蓝盾的全局变量 python -c "import os; print(os.environ.get('var'))" python -c "import os; print(os.environ.get('BK_CI_START_USER_NAME'))" ​ # 如果你知道自己定义的变量名字，也可以在自己的python文件里通过os.envion.get('var')来获取 cat << EOF > test.py import os print(os.environ.get('var')) EOF python test.py
+```
+
+问题二：如何将变量回写到蓝盾
+
+```
+ # 如果是常量，shell可以使用setEnv，bat可以使用call:setEnv来将变量回写到蓝盾 setEnv "var_name" "var_value" # shell call:setEnv "var_name" "var_value"  # bat ​ # 将python脚本输出结果写回蓝盾 var_value=`python script.py` # script.py里需要有print输出，如print("test") setEnv "var_name" "${var_value}" # var_name="test" ​ # 把变量写到一个文件中，然后在shell中读取这个文件，然后setEnv python script.py > env.sh # 假设env.sh里为file_name="test.txt" source env.sh setEnv "var_name" "${file_name}"
+```
+
+**Q: gitlab webhook 报错 URL '**[**http://devops.bktencent.com/ms/process/api/external/scm/gitlab/commit**](http://devops.bktencent.com/ms/process/api/external/scm/gitlab/commit)**' is blocked: Host cannot be resolved or invalid**
+
+需要在gitlab的机器上配置devops.bktencent.com的hosts解析
+
+**Q: 请问这个红框框怎么进入？**
+
+![](../../.gitbook/assets/企业微信截图\_16257162702433.png)
+
+「研发商店 」-「工作台」
+
+![](../../.gitbook/assets/wecom-temp-f1631f05683e7125be01a6b4e79492dd.png)
+
+**Q: 我看每个job是有自己独立的workspace的，那是否存在多个job公用一个workspace的情况呢？**
+
+如果用的单构建机（私有构建机），多个job就会共用一个workspace
+
+**Q: 请问下使用 "git拉取代码" 这个插件的时候，报这个错是啥原因呀。使用的是ssh私钥**
+
+![](../../.gitbook/assets/企业微信截图\_16266633248073.png)
+
+这是因为旧版git拉取代码插件不支持在windows构建机上使用，最新版插件已经支持
+
+**Q: bkiam v3 failed错误？**
+
+![](../../.gitbook/assets/企业微信截图\_16273862334714.png)
+
+这个问题一般是由于机器重启导致权限中心的saas容器没有启动导致，将容器重新拉起即可解决
+
+**Q: 如果我想在提pr的时候强制做一次代码扫描，应该如何配置？**
+
+如果是使用gitlab托管代码，直接配置gitlab触发器，触发的事件类型有：
+
+1. Commit Push Hook 代码提交时触发
+2. Tag Push Hook 提交有tag的代码时触发
+3. Merge Request Hook 当有代码合并时触发
+4. Merge Request Accept Hook 当代码合并后触发
+
+**Q: 代码检查里某些规则不适用于我们公司，怎么修改规则？**
+
+规则的内容不支持修改，但是规则集可以修改。代码检查是以规则集为单位进行代码扫描的，如果发现有些规则不适用，可以将其从规则集中去掉，如果该规则集是默认规则集不允许用户增删，可以选择在此基础上创建自定义规则集，创建的规则集就可以由用户自行增删其中的某些具体的规则了
+
+**Q: 代码检查失败，Unknown Error：Unexpected char 0x5468 at 0 in X-DEVOPS-UID value：xxx**
+
+![](../../.gitbook/assets/企业微信截图\_1630326503372.png)
+
+这一步会读取gitlab 的fullname，设置为英文可以解决问题，暂时还不支持中文的gitlab fullname，个人信息用户名显示上方就是fullname，如这里的vinco huang，可以通过这里的「Edit profile」进入修改页面
+
+![](../../.gitbook/assets/企业微信截图\_16303286841990.png)
+
+**Q: 我想在发送的企微消息通知里面附带当前build的一个artifacts文件的链接，该怎么构造附件的下载链接？**
+
+[http://devops.bktencent.com/ms/artifactory/api/user/artifactories/file/download/local?filePath=/bk-archive/panda/](http://devops.bktencent.com/ms/artifactory/api/user/artifactories/file/download/local?filePath=/bk-archive/panda/)${BK\_CI\_PIPELINE\_ID}/${BK\_CI\_BUILD\_ID}/{你的artifacts文件名}
+
+**Q: docker公共构建 支持自己的镜像吗？**
+
+支持，参考[https://docs.bkci.net/store/ci-images](https://docs.bkci.net/store/ci-images)
+
+**Q: 蓝盾支持私有构建集群里选一台空闲的机器运行流水线吗，比如我们编译打包服务器，可能同时会有多个人操作不同分支的打包。**
+
+如果有多台私有构建机，可以构成私有构建集群，选择这个集群后，蓝盾流水线按照一定的算法选择其中一台进行构建：
+
+**算法如下：**
+
+**最高优先级的agent:**
+
+1. 最近构建任务中使用过这个构建机
+2. 当前没有任何构建任务
+
+**次高优先级的agent:**
+
+1. 最近构建任务中使用过这个构建机
+2. 当前有构建任务，但是构建任务数量没有达到当前构建机的最大并发数
+
+**第三优先级的agent:**
+
+1. 当前没有任何构建任务
+
+**第四优先级的agent:**
+
+1. 当前有构建任务，但是构建任务数量没有达到当前构建机的最大并发数
+
+**最低优先级：**
+
+1. 都没有满足以上条件的
+
+**Q:** [**https://docs.bkci.net/**](https://docs.bkci.net)**打不开**
+
+![](../../.gitbook/assets/企业微信截图\_16342628987332.png)
+
+这个文档是由gitbook托管的，需要访问谷歌的一些资源，如果用户网络访问不了谷歌，会出现这样的问题
+
+**Q: 机器断电后重启，但蓝鲸有些服务没起来，这些服务没有设置开机自启动吗？**
+
+服务之间有依赖关系，比如蓝鲸的一些服务依赖于mysql，如果这些服务先于mysql启动，那就会出现启动失败的情况
+
+**Q: 我有pipeline A,可单独执行，我又有pipeline B,B里面会去调用A，等待A的一个结果，这种怎么做互斥呢**
+
+**占位，待补充**
+
+**Q: 可以针对流水线设置权限嘛，比如一个项目下的十个流水线，A可以看到一部分，B只能看到另一部分，想根据职能划分一下**
+
+权限中心可以针对单个流水线进行管理，首先要给特定用户授予项目的权限，然后再授予单个流水线的权限
+
+![](../../.gitbook/assets/wecom-temp-478bbf51b9813c4ec50828781038028b.png)
+
+![](../../.gitbook/assets/wecom-temp-d29b308520dfa33da51158b2d5c055a9.png)
+
+![](../../.gitbook/assets/wecom-temp-1e44f6048453bb9873ad1cc81c869a5e.png)
+
+**Q: 请问流水线的变量能联动吗，比如我下拉选择了变量1的值为A，变量2的值自动变为A？**
+
+暂时还不支持联动，如果值没什么变化，可以设置默认值
+
+**Q: 有支持git push的插件吗，想push一些东西到代码仓库上**
+
+可以试着用账密的方式push： git push [http://username:passwd@xxx](http://username:passwd@xxx)，username和passwd可以使用凭证管理起来，username和passwd不允许有特殊字符，蓝盾在渲染变量的时候，不会转义特殊字符
+
+**Q: 怎么重启私有构建上的蓝盾agent**
+
+可以到蓝盾agent的安装目录下，先执行stop.sh脚本（在windows上是stop.bat批处理文件），再执行start.sh（在windows上时start.bat文件）
+
+**Q: 私有构建机怎么重装蓝盾agent**
+
+1. 在linux/Mac上，可以支持重新执行安装命令，如果之前遇到安装错误，建议先uninstall，然后删除干净安装目录，重新跑安装命令
+2. windows上需要先uninstall，然后删除安装目录，重新下载安装包，重复安装过程即可
+
+**Q: 怎么使用流水线的视图功能**
+
+视图可以将流水线分类，允许用户根据流水线的创建人或者流水线的名称来进行分类，多个条件之间支持与/或关系，条件的键值是include的逻辑，不支持模糊匹配以及正则表达式，比如当流水线的名称对应的键值为`vinco`时，会匹配到该项目中所有流水线名称中包含`vinco`字样的流水线
+
+![](../../.gitbook/assets/image-20220125152014075.png)
+
+![](../../.gitbook/assets/image-20220125152350168.png)
+
+**Q: TGit插件无法选择gitlab代码库**
+
+TGit对接的是腾讯的工蜂代码库，无法使用gitlab代码库
+
+**Q: 定时触发的流水线，时间显示不对，触发时间也不对**
+
+![](../../.gitbook/assets/wecom-temp-26d5087b12647b6801f5d8471eeb3ee6.png)
+
+请检查蓝盾服务器的时间是否正常
 
