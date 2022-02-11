@@ -482,9 +482,74 @@ curl -X GET [https://devops.bktencent.com/prod/v3/apigw-app/projects/](https://d
 
 **Q: 在浏览器里完成了蓝盾登录，在同一浏览器不同tab访问蓝盾，还需要再次登录**
 
-种一般是cookie过期了，现在默认应该是两小时，过期时间可调
+这种情况是登录cookie过期了，现在默认应该是两小时，过期时间可调
 
-****
+**Q: 有条流水线是通过gitlab触发的，但查看代码变更记录为空，说明此次触发的构建，并没有新代码变更，那为啥为触发**
 
+可能的原因是，触发器监听了整个代码库的commit事件，但代码拉取插件只拉取了某一个特定分支的代码，而此分支并没有代码变更，比如，插件监听了整个代码库commit事件，但代码拉取插件只拉取了master分支的代码，而提交commit的是dev分支，代码变更记录显示的是所拉取的分支相交上一次体检的变更，master分支没有变更，所以没有变更记录。
 
+**Q: 流水线跟流水线可以设置互斥吗? 或者流水线A 启动, 流水线B启动的时候, 流水线B等待流水线A结束**
 
+现在只能对流水线中的JOB进行互斥组配置，如果这两个流水线只有一个JOB，那就这个JOB配置一个相同的互斥组就可以了。如果流水线有多个JOB，需要给两个流水线上再套一个流水线，然后在两条主流水线上配置互斥组，通过这个主流水线拉起任务。
+
+![](../../.gitbook/assets/wecom-temp-0427b67401a386578f79c2495a2009f8.png)
+
+**Q: 蓝盾脚本里会起一个gradle daemon进程。最近发现，构建完就关闭。怀疑是不是devops agent处理的？**
+
+![](../../.gitbook/assets/wecom-temp-d4178631b527e498ee7d8a0778c1fb09.png)
+
+蓝盾agent执行完构建任务后，会自动停止所有由agent启动的子进程，如果不需要结束子进程，可以在启动进程前设置环境变量：set DEVOPS\_DONT\_KILL\_PROCESS\_TREE=true，在bash脚本里设置`setEnv "DEVOPS_DONT_KILL_PROCESS_TREE" "true"`
+
+**Q: 可以设置 一个变量值, 根据这个变量, 判断是否运行某个 插件 吗**
+
+在插件下方选择「自定义变量全部满足时才运行」，自定义变量写需要依赖的变量名称和值
+
+![](../../.gitbook/assets/image-20220210120321712.png)
+
+**Q: 插件变量的值怎么获取、怎么写才对，比如我想获取插件里flushDB的值，然后在脚本里进行判断，我发现这么写是错误的？**
+
+![](../../.gitbook/assets/企业微信截图\_16318512177997.png)
+
+![](../../.gitbook/assets/企业微信截图\_16318512474377.png)
+
+![](../../.gitbook/assets/企业微信截图\_16318513189348.png)
+
+右上角点击引用变量，然后点右边复制变量，然后粘贴到你需要的地方就可以
+
+![](../../.gitbook/assets/wecom-temp-edfeb72810d972dae34d3f8d98232ec6.png)
+
+**Q: 如何在日志每一行前面加上时间戳**
+
+占位，待解决
+
+**Q:运行锁定, 有没有同一个时间最多运行一个构建任务, 后执行的强制取消先执行的任务**
+
+目前还没有这样的功能
+
+**Q: 我们有用一个 cat 去显示Log, 这个方式能用, 但有个问题, 每次打开速度都很慢, 差不多要3秒以上才显示Log 数据, 有没什么其他的比较好的方式显示log**
+
+关于3秒以上的问题，主要因为这个task对应的日志数据较大，日志内容在3MB，所以时间花在download上
+
+**Q: 流水线在执行中，unity的构建日志不会实时显示**
+
+其原因是「脚本中先执行unity编译构建操作，同时将日志写入文件，但在该操作结束前，不会执行后续的cat命令，导致日志无法实时在web页面上显示」。 针对此场景，可尝试以下解决方式：
+
+```
+ nohup $UNITY_PATH -quit -batchmode -projectPath $UNITY_PROJECT_PATH -logFile $UNITY_LOG_PATH -executeMethod CNC.Editor.PackageBuilderMenu.BuildPC "${isMono} ${isDevelop} $UNITY_OUT_PATH" & echo $! > /tmp/unity_${BK_CI_BUILD_ID}.pid unity_main_pid=$(cat /tmp/unity_${BK_CI_BUILD_ID}.pid) tail -f --pid ${unity_main_pid} $UNITY_LOG_PATH
+```
+
+**Q:怎么有条件的执行CallPipeline插件**
+
+插件下面有一个流程控制，在流程控制中根据需要添加运行条件可以满足需求
+
+![](../../.gitbook/assets/wecom-temp-70083f622bd2a6c839f9eb1b9436aac2.png)
+
+**Q: CallPipeline 这样传递参数好像不行？**
+
+![](../../.gitbook/assets/wecom-temp-3d80fac2503d5be8620e76b0d8175798.png)
+
+需要这样引用变量`${flushDB}`
+
+**Q: 怎么引用全局变量，我这么引用$BK\_CI\_BUILD\_FAIL\_TASKS好像不行**
+
+变量引用需要加花括号`${BK_CI_BUILD_FAIL_TASKS}`

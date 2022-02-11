@@ -2,7 +2,7 @@
 
 \[TOC]
 
-#### 用户组和用户自定义权限重叠导致用户对流水线的权限不符合预期，ci <1.7
+#### Q: 用户组和用户自定义权限重叠导致用户对流水线的权限不符合预期，ci <1.7
 
 #### **出现版本：ci<1.7**&#x20;
 
@@ -14,7 +14,18 @@
 
 ![无法查看流水线](<../.gitbook/assets/image (6) (1).png>)
 
-issue链接:
+**Q: gitlab偶现获取凭证失败**
 
+![](../.gitbook/assets/wecom-temp-941115d684647ac6fe940676a7854656.png)
 
+已知问题，**影响版本<=1.5.23**
 
+把ticket/lib/bcprov-jdk15on-1.64.jar这个包删除，然后重启ticket服务`systemctl restart bk-ci-ticket.service`
+
+**Q: 我想把单元测试报告作为产出物报告，上传成功。但是打开报告，无法正常显示，报错「This request有 哈哈是beenblocked； the content must be served over https」**
+
+![](../.gitbook/assets/wecom-temp-76f4802ef5f78b0abfda917c2575106a.png)
+
+已知问题，**影响版本: 1.5.x**
+
+****
