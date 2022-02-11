@@ -348,7 +348,8 @@ job脚本执行插件链接：[https://github.com/TencentBlueKing/ci-executeJobS
 
 #### Q: 发送邮件插件执行成功，但没收到邮件
 
-邮件发送需要先配置ESB，请参考：[https://bk.tencent.com/s-mart/community/question/2532](https://bk.tencent.com/s-mart/community/question/2532)
+1. 首先配置ESB的邮件信息，参考：[https://bk.tencent.com/s-mart/community/question/2532](https://bk.tencent.com/s-mart/community/question/2532)
+2. 配置插件的私有配置，参考：[https://github.com/TencentBlueKing/ci-sendEmail](https://github.com/TencentBlueKing/ci-sendEmail)
 
 #### Q: 发送邮件插件的sender配置不是我配置的sender
 
@@ -553,3 +554,70 @@ curl -X GET [https://devops.bktencent.com/prod/v3/apigw-app/projects/](https://d
 **Q: 怎么引用全局变量，我这么引用$BK\_CI\_BUILD\_FAIL\_TASKS好像不行**
 
 变量引用需要加花括号`${BK_CI_BUILD_FAIL_TASKS}`
+
+**Q: 选中的参数改变的时候能不能隐藏其他参数，比如我operator选中build，tag参数隐藏掉，就像js里option组件的change event**
+
+![](../../.gitbook/assets/企业微信截图\_1634710197325.png)
+
+暂时还不支持
+
+**Q: 我点击执行的时候，参数下拉列表里的值是能通过自定义的接口获取来吗？**
+
+不支持接口自定义
+
+**Q: 服务器磁盘满了，这些目录文件可以删吗**
+
+![](../../.gitbook/assets/企业微信截图\_1635304491832.png)
+
+这些都是构建产物，目前对构建产物没有过期清理策略，用户可以视情况删除
+
+**Q: 怎么在流水线执行过程中改变参数的值？**
+
+如果是shell插件的话，可以这么修改参数的值`setEnv "{KEY}" "{VALUE}"`
+
+**Q: 1.5.4版本CI，怎么调用openapi**
+
+版本还未开启OpenAPI。可以升级到1.5.30及以上版本，该版本已开启OpenAPI。
+
+**Q: 怎么查看凭证里的信息**
+
+![](../../.gitbook/assets/企业微信截图\_16372883269771-4480877.png)
+
+出于安全考虑，该内容为加密的，不支持查看
+
+**Q: 代码检查是否支持lua**
+
+代码检查暂不支持lua
+
+**Q: 我是否可以自行扩展代码检查的规则**
+
+目前自行扩展功能还在开发中，暂不支持用户自行扩展代码检查的规则
+
+**Q: 怎么让流水线task变成可选**
+
+`在插件里选择「Skip some on manual trigger」`
+
+![](../../.gitbook/assets/wecom-temp-ef4f873c64f962cc9582479c26442f2f.png)
+
+**Q: 让蓝盾的日志窗口保留颜色吗？想让失败的案例更明显点**
+
+参考[https://docs.bkci.net/reference/faqs/log-colors](https://docs.bkci.net/reference/faqs/log-colors)
+
+**Q:job-作业执行插件是灰色的，但我已经安装了**
+
+![](../../.gitbook/assets/企业微信截图\_16384260669700.png)
+
+这个是无编译环境使用的插件，需要在选择JOB类型时选择linux编译环境
+
+![](../../.gitbook/assets/image-20220210193855866.png)
+
+**Q: 这个业务ID是啥**
+
+![](../../.gitbook/assets/企业微信截图\_1638426248456.png)
+
+配置平台中的「业务ID」，作业平台里也可看到
+
+![](../../.gitbook/assets/image-20220210194131021.png)
+
+![](../../.gitbook/assets/image-20220210194135210.png)
+
