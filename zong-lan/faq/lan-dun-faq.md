@@ -437,23 +437,54 @@ Merge Request Accept Hook会在源分支**成功merge到目标分支时触发**
 
 ![](../../.gitbook/assets/wecom-temp-93d79eaa40a0ebdfaeff197d3016e1ee.png)
 
+**Q: batchscript插件无法执行bat文件，bat文件里有从系统中读取的变量，是当前用户设置的**
+
+![](../../.gitbook/assets/企业微信截图\_16285831782937.png)
+
+将对应的agent服务的启动用户改为当前用户，执行命令`services.msc`打开windows服务管理界面，找到服务`devops_agent_${agent_id}`(注意：每个agent\_id是不同的，agent\_id的值可以在配置文件.agent.properties中找到)
+
+右键->属性，在登录页签下选择此账户
+
+如果是如入域构建机，账户名填写`域名\用户名`，例如`tencent\zhangsan`;如果没有入域的构建机，账户名填入`.\用户名`,例如`.\admin、.\administrator、.\bkdevops`，输入密码后，点击确认按钮
+
+![](../../.gitbook/assets/image-20220128181627246.png)
+
+右键 -> 重新启动，重启服务
+
+![](../../.gitbook/assets/image-20220128181720819.png)
+
+打开任务管理器，查看进程devopsDaemon.exe和的vopsAgent.exe是否存在，查看两个进程的启动的用户名是否为当前登录用户
+
+**Q: batchscript中的命令路径有空格，执行失败**
+
+![](../../.gitbook/assets/企业微信截图\_16285852671573.png)
+
+可以将有空格的命令用引号""括起来
+
+**Q: 怎么通过接口获取项目**
+
+curl -X GET [https://devops.bktencent.com/prod/v3/apigw-app/projects/](https://devops.bktencent.com/prod/v3/apigw-app/projects/) -H "Content-Type: application/json" -H "X-DEVOPS-UID: admin"
+
+**Q: 这个「只有在前面插件运行失败才执行」条件，感觉没有用，成功了也执行了**\
 
 
+![](../../.gitbook/assets/wecom-temp-c6aa0d74275116c38ff7f592563616c7.png)
 
+这个条件的实际意思是：在这个插件前面的任何一个插件运行失败，就符合触发条件，而不是指『上一个』插件失败时运行
 
+**Q:项目的英文名称可以修改吗**
 
+暂不支持修改
 
+**Q: 怎么获取项目名称，我想要在企业微信通知消息里带上**
 
+使用全局变量`${BK_CI_PROJECT_NAME}`
 
+**Q: 在浏览器里完成了蓝盾登录，在同一浏览器不同tab访问蓝盾，还需要再次登录**
 
+种一般是cookie过期了，现在默认应该是两小时，过期时间可调
 
-
-
-
-
-
-
-
+****
 
 
 
