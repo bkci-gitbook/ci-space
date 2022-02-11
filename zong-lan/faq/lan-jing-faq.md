@@ -29,3 +29,11 @@
 **Q: 能调整蓝鲸登录的过期时长吗**
 
 占位**，待补充**
+
+**Q: 如何调整作业平台内存使用量**
+
+到作业平台机器上，将作业平台的env文件中JAVA\_OPTS修改为适合的内存大小，env文件为：/etc/sysconfig/bk-job-\*
+
+![](../../.gitbook/assets/tapd\_20452048\_1643014538\_32.png)
+
+然后重启job： `systemctl restart bk-job.target`

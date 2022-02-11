@@ -779,3 +779,94 @@ TGit对接的是腾讯的工蜂代码库，无法使用gitlab代码库
 
 请检查蓝盾服务器的时间是否正常
 
+**Q:流水线的历史页面，能显示自定义内容吗，比如同一条流水线，有时候是打包安卓，有时候是打包ios，单看历史页面，无法分辨出来构建内容**
+
+![](../../.gitbook/assets/企业微信截图\_16364221097534.png)
+
+可以在流水线里加个shell**插件**，通过设置`BK_CI_BUILD_REMARK`这全局变量的值，来实现想要的备注，流水线结束了，该字段才会显示
+
+![](../../.gitbook/assets/wecom-temp-a4453da39a470d74b7ed3d6da14120c0.png)
+
+![](../../.gitbook/assets/wecom-temp-9418a7960b89c65268c6947f46d95f72.png)
+
+**Q: windows构建机上安装蓝盾agent失败，子目录或文件已经存在，拒绝访问**
+
+![](../../.gitbook/assets/企业微信截图\_16393825053890-3096967.png)
+
+这种情况一般是由于用户重复安装蓝盾agent导致，可以先执行uninstall脚本，卸载当前agent，然后删除该agent的安装目录，然后重新下载agent包，再次安装
+
+**Q: 蓝盾的执行历史有设置上限的地方，我这个定时流水线可能1分钟一次，数据会浪费磁盘**
+
+频率高的定时任务，建议使用蓝鲸的作业平台
+
+**Q: Ubuntu蓝鲸agent安装失败，no enough space left in /tmp，但机器是有磁盘空间剩余的**
+
+![](../../.gitbook/assets/企业微信截图\_16316948048063.png)
+
+一般是由于Ubuntu机器无法正常执行awk命令导致的，执行awk会有如下报错：
+
+`awk: symbol lookup error: /usr/local/lib/libreadline.so.8: undefined symbol: UP`
+
+可以参考这个方法，进行替换：
+
+![](../../.gitbook/assets/wecom-temp-62020c1b6e41f1f9e6e421bfe0a7dc70.png)
+
+**Q: 关联镜像的时候，镜像验证不通过**
+
+![](../../.gitbook/assets/企业微信截图\_16328099498489.png)
+
+![](../../.gitbook/assets/wecom-temp-96f388a0cface3bdddafa174084719a1.png)
+
+镜像在私有仓库，docker默认不支持非https协议的私有仓库，需要修改公共构建机上的/etc/docker/daemon.json，在`insecure-registries`字段里添加私有仓库地址，然后重启docker服务
+
+![](<../../.gitbook/assets/企业微信截图\_16328106423641 (1).png>)
+
+**Q: bkci的镜像有基于Ubuntu系统的吗**
+
+没有现成的基于Ubuntu的bkci镜像，用户可以根据指引来打包自己的镜像：[https://bk.tencent.com/docs/document/6.0/129/7518](https://bk.tencent.com/docs/document/6.0/129/7518)
+
+**Q: 如果我有多个公共构建机，公共构建机的调度算法是怎么样的，什么情况任务会调度到另一台构建机上执行？**
+
+算法会优先选择上一次构建的机器（亲和性），上一次构建的机器的某一项资源超过以下阈值，就会寻找另一台构建机进行构建任务
+
+```
+ 内存阈值：80% 磁盘IO：85% 磁盘空间：90%
+```
+
+**Q: 如何调整调度算法中的资源阈值**
+
+目前只支持调整内存阈值，默认是80%，即当公共构建机的内存使用率达到80%时，如果其他构建机还有空闲资源，任务会被调度到其他构建机，这个阈值是可以修改的，修改方法如下，登录到蓝盾dispatch-docker服务的机器上， 执行：
+
+```
+ # threshold的值即为阈值百分比，这里以将内存阈值调整为70%为例 curl -H 'Accept:application/json;charset="utf-8"' -H 'Content-Type:application/json;charset="utf-8"' -H "X-DEVOPS-UID: admin" -X POST --data '{"threshold":"70"}' http://127.0.0.1:21938/api/op/dispatchDocker/docker/threshold/update
+```
+
+**Q: 偶现启动构建机启动失败，Get credential failed**
+
+已知问题，将dispatch-docker/lib/bcprov-jdk15on-1.64.jar删除，这是个软链，删除即可，然后重启dispatch-docker服务`systemctl restart bk-ci-dispatch-docker.service`
+
+**Q: 怎么删除公共构建机**
+
+登录到蓝盾dispatch-docker服务的机器上，执行`/data/src/ci/scripts/bkci-op.sh list`获取所有的公共构建机，执行`/data/src/ci/scripts/bkci-op.sh del`操作
+
+**Q: 构建步骤卡在准备构建环境这一环**
+
+![](../../.gitbook/assets/企业微信截图\_16419529383724.png)
+
+
+
+如果是公共构建机，优先考虑公共构建机bk-ci-dockerhost.service服务是否正常
+
+这种情况多见于私有构建机，多为agent安装异常导致，这里列举一些已知的原因：
+
+1. 网络原因，如无法解析蓝盾域名、蓝盾服务不可达等
+2. agent版本安装错误，如在mac上安装linux的agent包，这种情况，将蓝盾agent安装包删除，重新安装对应版本agent即可
+3. 在蓝盾agent安装目录的logs下的agentDaemon.log日志里可见`too many open files`,在机器上执行`ulimit -n`结果显示，可打开的文件数值太小，默认为1024，将其数值调大，重新安装蓝盾agent即可
+
+![](../../.gitbook/assets/wecom-temp-2cf366a83acf24ef09ae7dff30c47354.png)
+
+![](../../.gitbook/assets/wecom-temp-2eadbe319d03b3049c6b4cf300cda012.png)
+
+**Q: 流水线构建失败，Agent心跳超时/Agent Dead，请检查构建机状态**
+
+常见于在公共构建机上运行耗费内存的编译任务，导致容器oom，在公共构建机上执行`grep oom /var/log/messages`通常能看到匹配记录，如果是因为多个任务同时跑在同一台构建机上导致oom，可以通过调整调度算法的内存阈值，避免单台构建机上运行过多任务；如果单个编译任务就触发oom，建议调高构建机的内存，或者使用内存更高的私有构建机

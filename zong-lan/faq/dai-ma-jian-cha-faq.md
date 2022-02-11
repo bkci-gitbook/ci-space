@@ -53,3 +53,9 @@ codecc的规则暂时不支持自定义，只有少数规则可以修改参数
 
 ![](../../.gitbook/assets/wecom-temp-54ddc1c54d449c261c04721f0cf403d2.png)
 
+**Q:代码检查配置增量扫描的情况下，换了台新的公共构建机后，代码检查失败**
+
+![](../../.gitbook/assets/企业微信截图\_16388456801202.png)
+
+切换构建机的时候，需要先进行一次全量扫描，且gitlab checkout 选择fresh checkout方式
+
