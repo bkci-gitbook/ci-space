@@ -14,6 +14,9 @@
   * [关联你的第一个代码库](zong-lan/kuai-su-ru-men/guan-lian-ni-de-di-yi-ge-dai-ma-ku.md)
   * [在流水线里使用变量](zong-lan/kuai-su-ru-men/zai-liu-shui-xian-li-shi-yong-bian-liang.md)
   * [从空白流水线开始](zong-lan/kuai-su-ru-men/cong-kong-bai-liu-shui-xian-kai-shi.md)
+  * [为你的SVN项目开启CI](zong-lan/kuai-su-ru-men/wei-ni-de-svn-xiang-mu-kai-qi-ci.md)
+  * [一小时带你玩转蓝盾DevOps - 1](zong-lan/kuai-su-ru-men/yi-xiao-shi-dai-ni-wan-zhuan-lan-dun-devops-1.md)
+  * [一小时带你玩转蓝盾DevOps - 2](zong-lan/kuai-su-ru-men/yi-xiao-shi-dai-ni-wan-zhuan-lan-dun-devops-2.md)
 
 ## 功能介绍 <a href="#features" id="features"></a>
 

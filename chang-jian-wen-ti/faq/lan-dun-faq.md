@@ -84,7 +84,7 @@ setEnv 设置的是当前bash的输出参数，在下游才会生效，当前的
 
 #### Q: 节点机器，显示正常，为什么监控网络io没有数据？
 
-![](<../../.gitbook/assets/image (9) (1).png>)
+![](<../../.gitbook/assets/image (9) (1) (1).png>)
 
 没有启用. 这个监控并无意义, 也不影响调度. 建议使用蓝鲸监控等专门的监控系统负责.
 
@@ -159,7 +159,7 @@ BKCI这边推送镜像默认都走https，如果要走http需要把仓库域名�
 
 #### Q:no available Docker VM
 
-![](<../../.gitbook/assets/image (11) (1).png>)
+![](<../../.gitbook/assets/image (11) (1) (1).png>)
 
 是没有可用的ci-dockerhost.需要:
 
@@ -179,7 +179,7 @@ BKCI这边推送镜像默认都走https，如果要走http需要把仓库域名�
 
 #### Q: 拉取镜像失败，错误信息：status 500
 
-![](<../../.gitbook/assets/image (19).png>)
+![](<../../.gitbook/assets/image (19) (1).png>)
 
 用户自行配置的仓库，需要先保证网路可达
 
@@ -195,7 +195,7 @@ windows下，agent无法拉起有UI界面的exe
 
 #### Q: failed to connect to gitlib.xxx.com port 443:connection timed out 构建失败 提示连接443端口超时
 
-![](<../../.gitbook/assets/image (13) (1).png>)
+![](<../../.gitbook/assets/image (13) (1) (1).png>)
 
 这里断网的原因是dockerhost启动后, 执行过sysctl -p等价的命令, 导致 net.ipv4.ip\_forward 被重置为0, 导致容器断网.&#x20;
 
@@ -249,7 +249,7 @@ curl -v paas.service.consul
 
 #### Q: 研发商店：插件配置文件\[task.json]atomCode字段与工作台录入的不一致
 
-![](<../../.gitbook/assets/image (10) (1).png>)
+![](<../../.gitbook/assets/image (10) (1) (1).png>)
 
 上传的，可能不是插件发布包，是源代码。发布过程看插件的readme
 
@@ -273,7 +273,7 @@ curl -v paas.service.consul
 
 /data/bkce/ci/environment/logs/auth-devops.log
 
-![](<../../.gitbook/assets/image (6).png>)
+![](<../../.gitbook/assets/image (6) (1).png>)
 
 排查发现ci auth库下的 T\_AUTH\_IAM\_CALLBACK表 为空
 
@@ -312,7 +312,7 @@ CI 的归档，是将产物暂存到仓库，方便流水线下游操作使用�
 
 #### Q: JOOQ;uncategorized SQLException for SQL
 
-![](<../../.gitbook/assets/image (15).png>)
+![](<../../.gitbook/assets/image (15) (1).png>)
 
 旧sql没有清理的缘故
 
@@ -328,7 +328,7 @@ cd ${CTRL_DIR:-/data/install}
 
 #### Q: private configuration of key JOB\_HOST is missing
 
-![](<../../.gitbook/assets/image (12) (1).png>)
+![](<../../.gitbook/assets/image (12) (1) (1).png>)
 
 job脚本执行插件链接：[https://github.com/TencentBlueKing/ci-executeJobScript](https://github.com/TencentBlueKing/ci-executeJobScript)
 
@@ -342,7 +342,7 @@ job脚本执行插件链接：[https://github.com/TencentBlueKing/ci-executeJobS
 
 插件的执行环境分为有编译和无编译，发送邮件插件的执行环境为无编译环境，在创建Job的步骤时，需要选Job类型为无编译环境，即Agentless
 
-![](<../../.gitbook/assets/image (12).png>)
+![](<../../.gitbook/assets/image (12) (1).png>)
 
 ![](<../../.gitbook/assets/image (3) (1) (1).png>)
 
@@ -388,7 +388,7 @@ sender需要在插件的「私有配置」里设置，独立于ESB的mail\_sende
 
 #### Q: 怎么使用Merge-Request-Accept-Hook，我的怎么没触发？我希望分支feature\_lzj\_test123123213合并到feature\_lzj\_test0117时触发流水线
 
-![](<../../.gitbook/assets/image (9).png>)
+![](<../../.gitbook/assets/image (9) (1).png>)
 
 Merge Request Accept Hook会在源分支**成功merge到目标分支时触发**
 
