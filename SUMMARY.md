@@ -12,8 +12,8 @@
 * [快速入门](zong-lan/kuai-su-ru-men/README.md)
   * [创建你的第一条流水线](zong-lan/kuai-su-ru-men/chuang-jian-ni-de-di-yi-tiao-liu-shui-xian.md)
   * [关联你的第一个代码库](zong-lan/kuai-su-ru-men/guan-lian-ni-de-di-yi-ge-dai-ma-ku.md)
-  * [CI镜像](zong-lan/kuai-su-ru-men/ci-jing-xiang.md)
-  * [使用 One-Docker 运行 BKCI 的学习环境](zong-lan/kuai-su-ru-men/shi-yong-onedocker-yun-hang-bkci-de-xue-xi-huan-jing.md)
+  * [在流水线里使用变量](zong-lan/kuai-su-ru-men/zai-liu-shui-xian-li-shi-yong-bian-liang.md)
+  * [从空白流水线开始](zong-lan/kuai-su-ru-men/cong-kong-bai-liu-shui-xian-kai-shi.md)
 
 ## 功能介绍 <a href="#features" id="features"></a>
 

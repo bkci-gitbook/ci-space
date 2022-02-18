@@ -4,7 +4,7 @@
 
 * **切换至代码库服务**
 
-![](<../../.gitbook/assets/image (3).png>)
+![](<../../.gitbook/assets/image (4).png>)
 
 * **点击关联Git代码库**
 

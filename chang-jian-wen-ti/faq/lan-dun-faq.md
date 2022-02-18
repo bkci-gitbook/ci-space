@@ -32,7 +32,7 @@ coverY: 0
 
 ![](<../../.gitbook/assets/image (2).png>)
 
-![](<../../.gitbook/assets/image (5) (1) (1).png>)
+![](<../../.gitbook/assets/image (5) (1) (1) (1).png>)
 
 #### Q: 流水线执行失败了，插件为什么没有重试按钮？
 
@@ -62,7 +62,7 @@ https://iwiki.woa.com/pages/viewpage.action?pageId=26941983
 
 存在权限冲突，在用户组权限里，是有多个流水线的权限。 但是自定义里面只有一个流水线的权限。 后续更新版本会修复这个问题。解决方案为删除自定义权限。后续会通过版本更新修复该问题。&#x20;
 
-![](<../../.gitbook/assets/image (1) (1).png>)
+![](<../../.gitbook/assets/image (1) (1) (1).png>)
 
 #### Q: python的环境变量添加后，在job执行的时候未生效。（job报错“系统找不到指定的文件”）
 
@@ -139,7 +139,7 @@ curl -s -u elastic:$BK_ES7_ADMIN_PASSWORD -X DELETE http://$BK_ES7_IP:9200/index
 
 #### Q:公共构建机，这几类都支持吗？
 
-![](../../.gitbook/assets/image.png)
+![](<../../.gitbook/assets/image (1).png>)
 
 公共构建机依赖docker, 只能运行linux. 目前只能运行基于我们 bkci/ci:alpine (debian系统)制作的构建镜像.
 
@@ -265,7 +265,7 @@ curl -v paas.service.consul
 
 #### Q: 蓝盾添加节点的时候报错 bkiam v3 failed&#x20;
 
-![](<../../.gitbook/assets/image (1).png>)
+![](<../../.gitbook/assets/image (1) (1).png>)
 
 #### 然后根据给出的文档排查了日志
 
