@@ -1,4 +1,4 @@
-# 浏览研发商店
+# 研发商店
 
 研发商店里提供了流水线运行需要的公共资源：插件、模板、容器镜像。你可以找到适合自己项目的插件，
 
@@ -24,4 +24,4 @@
 
 ### &#x20;<a href="#jie-xia-lai-ni-ke-neng-xu-yao" id="jie-xia-lai-ni-ke-neng-xu-yao"></a>
 
-* ​[开发一个流水线插件](<.gitbook/assets/create plugin>)​
+* ​[开发一个流水线插件](<../.gitbook/assets/create plugin>)​

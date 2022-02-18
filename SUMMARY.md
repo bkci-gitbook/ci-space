@@ -1,22 +1,45 @@
 # Table of contents
 
+* [首页](README.md)
+
 ## 总 览
 
-* [蓝盾使用文档](README.md)
-* [代码检查使用文档](zong-lan/dai-ma-jian-cha-shi-yong-wen-dang.md)
-* [FAQ](zong-lan/faq/README.md)
-  * [蓝盾FAQ](zong-lan/faq/lan-dun-faq.md)
-  * [代码检查FAQ](zong-lan/faq/dai-ma-jian-cha-faq.md)
-  * [编译加速FAQ](zong-lan/faq/bian-yi-jia-su-faq.md)
-  * [蓝鲸FAQ](zong-lan/faq/lan-jing-faq.md)
-* [已知问题](zong-lan/yi-zhi-wen-ti.md)
+* [概览](zong-lan/gai-lan/README.md)
+  * [BKCI 组件](zong-lan/gai-lan/bkci-zu-jian.md)
+  * [BKCI 是什么？](zong-lan/gai-lan/bkci-shi-shi-mo.md)
+  * [5分钟读懂 BKCI 流水线](zong-lan/gai-lan/5-fen-zhong-du-dong-bkci-liu-shui-xian.md)
+  * [BKCI 系统要求](zong-lan/gai-lan/bkci-xi-tong-yao-qiu.md)
+* [快速入门](zong-lan/kuai-su-ru-men/README.md)
+  * [创建你的第一条流水线](zong-lan/kuai-su-ru-men/chuang-jian-ni-de-di-yi-tiao-liu-shui-xian.md)
+  * [关联你的第一个代码库](zong-lan/kuai-su-ru-men/guan-lian-ni-de-di-yi-ge-dai-ma-ku.md)
+  * [CI镜像](zong-lan/kuai-su-ru-men/ci-jing-xiang.md)
+  * [使用 One-Docker 运行 BKCI 的学习环境](zong-lan/kuai-su-ru-men/shi-yong-onedocker-yun-hang-bkci-de-xue-xi-huan-jing.md)
 
-## 增值服务
+## 功能介绍 <a href="#features" id="features"></a>
 
-* [自监控](zeng-zhi-fu-wu/zi-jian-kong.md)
-* [自更新](zeng-zhi-fu-wu/zi-geng-xin.md)
-* [通讯录同步](zeng-zhi-fu-wu/tong-xun-lu-tong-bu.md)
-* [二维码登录](zeng-zhi-fu-wu/er-wei-ma-deng-lu.md)
+* [流水线](features/liu-shui-xian/README.md)
+  * [流水线模板](features/liu-shui-xian/liu-shui-xian-mo-ban.md)
+* [编译加速](features/bian-yi-jia-su.md)
+* [代码库](features/dai-ma-ku.md)
+* [控制台](features/kong-zhi-tai.md)
+* [研发商店](features/yan-fa-shang-dian.md)
+* [便捷功能](features/bian-jie-gong-neng/README.md)
+  * [docker registry](features/bian-jie-gong-neng/docker-registry.md)
+  * [docker in docker](features/bian-jie-gong-neng/docker-in-docker.md)
+  * [二维码登录](features/bian-jie-gong-neng/er-wei-ma-deng-lu.md)
+  * [通讯录同步](features/bian-jie-gong-neng/tong-xun-lu-tong-bu.md)
+  * [自更新](features/bian-jie-gong-neng/zi-geng-xin.md)
+  * [自监控](features/bian-jie-gong-neng/zi-jian-kong.md)
+  * [凭证管理](features/bian-jie-gong-neng/ping-zheng-guan-li.md)
+* [插件](features/cha-jian/README.md)
+  * [钉钉消息通知插件](features/cha-jian/ding-ding-xiao-xi-tong-zhi-cha-jian.md)
+  * [通用消息发送插件](features/cha-jian/tong-yong-xiao-xi-fa-song-cha-jian.md)
+* [术语解释](features/shu-yu-jie-shi.md)
+
+## 使用说明
+
+* [代码检查使用文档](shi-yong-shuo-ming/dai-ma-jian-cha-shi-yong-wen-dang.md)
+* [蓝盾使用文档](shi-yong-shuo-ming/lan-dun-shi-yong-wen-dang.md)
 
 ## 实践案例
 
@@ -27,36 +50,11 @@
 * [编译加速](shi-jian-an-li/bian-yi-jia-su/README.md)
   * [编译加速使用案例](shi-jian-an-li/bian-yi-jia-su/bian-yi-jia-su-shi-yong-an-li.md)
 
-## 插件
+## 常见问题
 
-* [钉钉消息通知插件](cha-jian/ding-ding-xiao-xi-tong-zhi-cha-jian.md)
-* [通用消息发送插件](cha-jian/tong-yong-xiao-xi-fa-song-cha-jian.md)
-
-## 流水线定制化方案
-
-* [docker in docker](liu-shui-xian-ding-zhi-hua-fang-an/docker-in-docker.md)
-* [docker registry](liu-shui-xian-ding-zhi-hua-fang-an/docker-registry.md)
-
-***
-
-* [首页](shou-ye.md)
-* [创建你的第一条流水线](chuang-jian-ni-de-di-yi-tiao-liu-shui-xian.md)
-* [5分钟读懂 BKCI 流水线](5-fen-zhong-du-dong-bkci-liu-shui-xian.md)
-* [BKCI 是什么？](bkci-shi-shi-mo.md)
-* [BKCI 组件](bkci-zu-jian.md)
-* [术语解释](shu-yu-jie-shi.md)
-* [关联你的第一个代码库](guan-lian-ni-de-di-yi-ge-dai-ma-ku.md)
-* [示例](shi-li.md)
-* [BKCI 系统要求](bkci-xi-tong-yao-qiu.md)
-* [在生产环境中运行 BKCI](zai-sheng-chan-huan-jing-zhong-yun-hang-bkci.md)
-* [使用 One-Docker 运行 BKCI 的学习环境](shi-yong-onedocker-yun-hang-bkci-de-xue-xi-huan-jing.md)
-* [控制台](kong-zhi-tai.md)
-* [为你的Git工程开启CI](wei-ni-de-git-gong-cheng-kai-qi-ci.md)
-* [构建资源](gou-jian-zi-yuan.md)
-* [流水线](liu-shui-xian.md)
-* [编译加速](bian-yi-jia-su.md)
-* [代码库](dai-ma-ku.md)
-* [凭证管理](ping-zheng-guan-li.md)
-* [流水线模板](liu-shui-xian-mo-ban.md)
-* [浏览研发商店](liu-lan-yan-fa-shang-dian.md)
-* [CI镜像](ci-jing-xiang.md)
+* [已知问题](chang-jian-wen-ti/yi-zhi-wen-ti.md)
+* [FAQ](chang-jian-wen-ti/faq/README.md)
+  * [蓝盾FAQ](chang-jian-wen-ti/faq/lan-dun-faq.md)
+  * [代码检查FAQ](chang-jian-wen-ti/faq/dai-ma-jian-cha-faq.md)
+  * [编译加速FAQ](chang-jian-wen-ti/faq/bian-yi-jia-su-faq.md)
+  * [蓝鲸FAQ](chang-jian-wen-ti/faq/lan-jing-faq.md)

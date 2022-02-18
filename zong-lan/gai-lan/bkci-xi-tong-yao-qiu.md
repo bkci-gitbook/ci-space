@@ -1,6 +1,6 @@
 # BKCI 系统要求
 
-我们提供了以最小化硬件成本搭建起 BKCI 的最低要求。如果你正尝试将 BKCI 投入生产环境，请仔细阅读：[BKCI 硬件规格指南](<.gitbook/assets/hardware specifications>)​
+我们提供了以最小化硬件成本搭建起 BKCI 的最低要求。如果你正尝试将 BKCI 投入生产环境，请仔细阅读：[BKCI 硬件规格指南](<../../.gitbook/assets/hardware specifications>)​
 
 Web客户端要求
 
@@ -36,4 +36,4 @@ BKCI 支持如下主流的浏览器：
 
 **附加要求**
 
-​[第三方构建机环境准备](<.gitbook/assets/prepara agent>)​
+​[第三方构建机环境准备](<../../.gitbook/assets/prepara agent>)​

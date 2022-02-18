@@ -6,7 +6,7 @@
 
 * 一个 git 工程，可参考[关联你的第一个代码库](broken-reference)​
 * 一个 BKCI 项目
-* 熟悉[创建/编辑流水线](<.gitbook/assets/pipeline edit>)页面相关操作
+* 熟悉[创建/编辑流水线](<../../.gitbook/assets/pipeline edit>)页面相关操作
 
 ### &#x20;<a href="#yun-hang-ni-de-di-yi-ci-gou-jian" id="yun-hang-ni-de-di-yi-ci-gou-jian"></a>
 
