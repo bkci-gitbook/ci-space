@@ -20,7 +20,7 @@ coverY: 0
 
 调整分发源的限速，如下图。 对于已经安装agent的机器，可以先移除，再安装。 分发源机器IP: 192.168.5.134&#x20;
 
-![](<../../.gitbook/assets/image (8) (1).png>)
+![](<../../.gitbook/assets/image (8) (1) (1).png>)
 
 #### Q: 如何获取流水线id？
 
@@ -42,7 +42,7 @@ coverY: 0
 
 有了部署机器，我们可以将构件分发至测试机上了。首先添加一个无编译环境Job 3-1，添加插件作业平台-构件分发并完成配置。&#x20;
 
-![](<../../.gitbook/assets/image (7) (1).png>)
+![](<../../.gitbook/assets/image (7) (1) (1).png>)
 
 #### Q: 蓝盾有哪些全局变量？
 
@@ -52,7 +52,7 @@ https://iwiki.woa.com/pages/viewpage.action?pageId=26941983
 
 查看日志页，Show/Hide Timestamp&#x20;
 
-![](<../../.gitbook/assets/image (4) (1).png>)
+![](<../../.gitbook/assets/image (4) (1) (1).png>)
 
 #### Q: 蓝盾流水线中的视图管理、标签管理有什么用？
 
@@ -114,7 +114,7 @@ setEnv 设置的是当前bash的输出参数，在下游才会生效，当前的
 
 #### Q:ci不显示日志
 
-![](<../../.gitbook/assets/image (7).png>)
+![](<../../.gitbook/assets/image (7) (1).png>)
 
 查看对应微服务日志 /data/bkce/logs/ci/log/
 
@@ -149,7 +149,7 @@ curl -s -u elastic:$BK_ES7_ADMIN_PASSWORD -X DELETE http://$BK_ES7_IP:9200/index
 
 #### Q:上传镜像报错，程序默认把http方式换成https了
 
-![](<../../.gitbook/assets/image (3) (1) (1).png>)
+![](<../../.gitbook/assets/image (3) (1) (1) (1).png>)
 
 docker默认是https的, 这个要改服务端的docker. 需要在dockerhost机器的/etc/docker/daemon.json添加insecure-registry.
 
@@ -257,7 +257,7 @@ curl -v paas.service.consul
 
 #### Q: 插件包上传失败
 
-![](<../../.gitbook/assets/image (8).png>)
+![](<../../.gitbook/assets/image (8) (1).png>)
 
 可以先检查下blueking用户能否正常读写 artifactory数据目录: /data/bkce/public/ci/artifactory/
 
@@ -344,7 +344,7 @@ job脚本执行插件链接：[https://github.com/TencentBlueKing/ci-executeJobS
 
 ![](<../../.gitbook/assets/image (12).png>)
 
-![](<../../.gitbook/assets/image (3) (1).png>)
+![](<../../.gitbook/assets/image (3) (1) (1).png>)
 
 #### Q: 发送邮件插件执行成功，但没收到邮件
 
