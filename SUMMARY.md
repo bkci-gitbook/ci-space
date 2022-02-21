@@ -8,7 +8,7 @@
 ## 快速入门
 
 * [快速入门](kuai-su-ru-men/kuai-su-ru-men/README.md)
-  * [创建你的第一条流水线](kuai-su-ru-men/kuai-su-ru-men/chuang-jian-ni-de-di-yi-tiao-liu-shui-xian.md)
+  * [《10分钟快速创建你的第一条流水线》](kuai-su-ru-men/kuai-su-ru-men/10-fen-zhong-kuai-su-chuang-jian-ni-de-di-yi-tiao-liu-shui-xian.md)
   * [关联你的第一个代码库](kuai-su-ru-men/kuai-su-ru-men/guan-lian-ni-de-di-yi-ge-dai-ma-ku.md)
   * [在流水线里使用变量](kuai-su-ru-men/kuai-su-ru-men/zai-liu-shui-xian-li-shi-yong-bian-liang.md)
   * [从空白流水线开始](kuai-su-ru-men/kuai-su-ru-men/cong-kong-bai-liu-shui-xian-kai-shi.md)

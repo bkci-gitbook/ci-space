@@ -4,7 +4,7 @@
 
 * 一个SVN工程（如没有，请参考[关联你的第一个代码库](http://iwiki.oa.com/pages/viewpage.action?pageId=10718809)）
 * 一个蓝盾项目
-* 了解蓝盾流水线基本概念和使用（若首次使用蓝盾，请参考[创建你的第一条蓝盾流水线](chuang-jian-ni-de-di-yi-tiao-liu-shui-xian.md)）
+* 了解蓝盾流水线基本概念和使用（若首次使用蓝盾，请参考[创建你的第一条蓝盾流水线](broken-reference)）
 
 ### 二、创建 SVN Commit Push 事件触发执行的流水线 <a href="#id-wei-ni-de-svn-xiang-mu-kai-qi-ci-er-chuang-jian-svncommitpush-shi-jian-chu-fa-zhi-hang-de-liu-shu" id="id-wei-ni-de-svn-xiang-mu-kai-qi-ci-er-chuang-jian-svncommitpush-shi-jian-chu-fa-zhi-hang-de-liu-shu"></a>
 
