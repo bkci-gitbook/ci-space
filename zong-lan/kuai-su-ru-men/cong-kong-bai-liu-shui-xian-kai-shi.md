@@ -10,6 +10,6 @@
 
 * 指定构建镜像（点此了解[怎么制作自己的CI镜像](https://iwiki.woa.com/pages/viewpage.action?pageId=15109166)）
 
-![](<../../.gitbook/assets/image (18) (1).png>)
+![](<../../.gitbook/assets/image (18) (1) (1).png>)
 
 * 添加插件

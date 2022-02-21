@@ -18,7 +18,7 @@
 
 ### **4. 构建环境中配置 maven 依赖编译环境** <a href="#javademo4.-gou-jian-huan-jing-zhong-pei-zhi-maven-yi-lai-bian-yi-huan-jing" id="javademo4.-gou-jian-huan-jing-zhong-pei-zhi-maven-yi-lai-bian-yi-huan-jing"></a>
 
-![](<../../.gitbook/assets/image (31).png>)
+![](<../../.gitbook/assets/image (31) (1).png>)
 
 ### **5. 在 Job 内以此添加如下插件** <a href="#javademo5.-zai-job-nei-yi-ci-tian-jia-ru-xia-cha-jian" id="javademo5.-zai-job-nei-yi-ci-tian-jia-ru-xia-cha-jian"></a>
 
@@ -28,7 +28,7 @@
 
 #### 5.2 [Bash](http://docs.devops.oa.com/%E6%89%80%E6%9C%89%E6%9C%8D%E5%8A%A1/%E6%B5%81%E6%B0%B4%E7%BA%BF/%E7%94%A8%E6%88%B7%E6%8C%87%E5%8D%97/%E6%8F%92%E4%BB%B6%E5%88%97%E8%A1%A8/script.html)：替换 TEAM\_GK、PROJECT\_NAME、REPO\_NAME、MAVEN\_USER\_NAME、MAVEN\_TOKEN，将构件部署至腾讯软件源 <a href="#javademo5.2bash-ti-huan-teamgkprojectnamereponamemavenusernamemaventoken-jiang-gou-jian-bu-shu-zhi-t" id="javademo5.2bash-ti-huan-teamgkprojectnamereponamemavenusernamemaventoken-jiang-gou-jian-bu-shu-zhi-t"></a>
 
-![](<../../.gitbook/assets/image (25).png>)
+![](<../../.gitbook/assets/image (25) (1).png>)
 
 | `mvn package` `sed` `-i 's/{{TEAM_GK}}/devops/'` `settings.xmlsed` `-i 's/{{PROJECT_NAME}}/demo/'` `settings.xmlsed` `-i 's/{{REPO_NAME}}/mavendemo/'` `settings.xmlsed` `-i 's/{{MAVEN_USERNAME}}/xxxxxx/'` `settings.xmlsed` `-i 's/{{MAVEN_TOKEN}}/xxxxxx/'` `settings.xml` `mv` `settings.xml ~/.m2` `cat` `~/.m2/settings.xml` `mvn deploy:deploy-file` `-Dfile=${WORKSPACE}/target/demo-0.0.1-SNAPSHOT.jar -DgroupId=devops -DartifactId=demo -Dversion=0.0.1-SNAPSHOT -Dpackaging=jar -DrepositoryId=devops-demo-mavendemo -Durl=https://mirrors.tencent.com/repository/maven/mavendemo/` |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -38,8 +38,8 @@
 
 ### **6. 运行流水线，观察结果** <a href="#javademo6.-yun-hang-liu-shui-xian-guan-cha-jie-guo" id="javademo6.-yun-hang-liu-shui-xian-guan-cha-jie-guo"></a>
 
-![](<../../.gitbook/assets/image (29).png>)
+![](<../../.gitbook/assets/image (29) (1).png>)
 
 ### **7. 到腾讯软件源的**[**Maven内部组件仓库**](http://mirrors.tencent.com/#/private/maven)**确认构件是否推送成功** <a href="#javademo7.-dao-teng-xun-ruan-jian-yuan-de-maven-nei-bu-zu-jian-cang-ku-que-ren-gou-jian-shi-fou-tui" id="javademo7.-dao-teng-xun-ruan-jian-yuan-de-maven-nei-bu-zu-jian-cang-ku-que-ren-gou-jian-shi-fou-tui"></a>
 
-![](<../../.gitbook/assets/image (14).png>)
+![](<../../.gitbook/assets/image (14) (1).png>)

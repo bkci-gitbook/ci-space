@@ -25,7 +25,7 @@
 
 **4. 运行流水线，观察结果**
 
-![](<../../.gitbook/assets/image (28).png>)
+![](<../../.gitbook/assets/image (28) (1).png>)
 
 **5. 到 STKE 容器服务查看实例状态是否正常运行**
 

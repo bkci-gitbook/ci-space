@@ -24,6 +24,8 @@
   * [RPM Demo](zong-lan/xiang-mu-jie-ru-shi-li-demo/rpm-demo.md)
   * [TKEX Demo](zong-lan/xiang-mu-jie-ru-shi-li-demo/tkex-demo.md)
   * [UE4 Demo](zong-lan/xiang-mu-jie-ru-shi-li-demo/ue4-demo.md)
+  * [Unity Demo](zong-lan/xiang-mu-jie-ru-shi-li-demo/unity-demo.md)
+  * [XCode Demo](zong-lan/xiang-mu-jie-ru-shi-li-demo/xcode-demo.md)
 
 ## 功能介绍 <a href="#features" id="features"></a>
 

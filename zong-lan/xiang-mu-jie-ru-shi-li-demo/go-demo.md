@@ -31,25 +31,25 @@
 
 * [Bash](http://devops.oa.com/console/store/atomStore/detail/atom/linuxScript)：go mod download
 
-![](<../../.gitbook/assets/image (11).png>)
+![](<../../.gitbook/assets/image (11) (1).png>)
 
 * [Bash](http://devops.oa.com/console/store/atomStore/detail/atom/linuxScript)：go run main.go
 
-![](<../../.gitbook/assets/image (9).png>)
+![](<../../.gitbook/assets/image (9) (1).png>)
 
 * [Bash](http://devops.oa.com/console/store/atomStore/detail/atom/linuxScript)：go build
 
-![](<../../.gitbook/assets/image (8).png>)
+![](<../../.gitbook/assets/image (8) (1).png>)
 
 * [归档构件](http://devops.oa.com/console/store/atomStore/detail/atom/UploadArtifactory)：将编译产物上传至[蓝盾制品库](https://iwiki.woa.com/pages/viewpage.action?pageId=17503979)，这里demo里的产物是"[gomod-git.code.oa.com-github.com](http://gomod-git.code.oa.com-github.com)-test"
 
-![](<../../.gitbook/assets/image (13).png>)
+![](<../../.gitbook/assets/image (13) (1).png>)
 
 #### **6. 运行流水线，观察结果，并查看上传的构件** <a href="#godemo6.-yun-hang-liu-shui-xian-guan-cha-jie-guo-bing-cha-kan-shang-chuan-de-gou-jian" id="godemo6.-yun-hang-liu-shui-xian-guan-cha-jie-guo-bing-cha-kan-shang-chuan-de-gou-jian"></a>
 
 ![](<../../.gitbook/assets/image (2).png>)
 
-![](<../../.gitbook/assets/image (12).png>)
+![](<../../.gitbook/assets/image (12) (1).png>)
 
 \
 \

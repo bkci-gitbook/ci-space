@@ -17,7 +17,7 @@
 
 #### 4.1 [拉取Git（命令行）](http://devops.oa.com/console/store/atomStore/detail/atom/gitCodeRepo)：将rpm工程拉取到 Linux Job 内  <a href="#rpmdemo4.1-la-qu-git-ming-ling-hang-jiang-rpm-gong-cheng-la-qu-dao-linuxjob-nei" id="rpmdemo4.1-la-qu-git-ming-ling-hang-jiang-rpm-gong-cheng-la-qu-dao-linuxjob-nei"></a>
 
-![](<../../.gitbook/assets/image (10).png>)
+![](<../../.gitbook/assets/image (10) (1).png>)
 
 #### 4.2 [Bash](http://docs.devops.oa.com/%E6%89%80%E6%9C%89%E6%9C%8D%E5%8A%A1/%E6%B5%81%E6%B0%B4%E7%BA%BF/%E7%94%A8%E6%88%B7%E6%8C%87%E5%8D%97/%E6%8F%92%E4%BB%B6%E5%88%97%E8%A1%A8/script.html)：替换 rpm spec 文件的 Release 字段 <a href="#rpmdemo4.2bash-ti-huan-rpmspec-wen-jian-de-release-zi-duan" id="rpmdemo4.2bash-ti-huan-rpmspec-wen-jian-de-release-zi-duan"></a>
 
@@ -29,7 +29,7 @@
 
 ### **6. 到腾讯软件源的**[**RPM内部组件仓库**](http://mirrors.tencent.com/#/private/rpm)**确认 RPM 是否推送成功** <a href="#rpmdemo6.-dao-teng-xun-ruan-jian-yuan-de-rpm-nei-bu-zu-jian-cang-ku-que-ren-rpm-shi-fou-tui-song-che" id="rpmdemo6.-dao-teng-xun-ruan-jian-yuan-de-rpm-nei-bu-zu-jian-cang-ku-que-ren-rpm-shi-fou-tui-song-che"></a>
 
-![](<../../.gitbook/assets/image (19).png>)
+![](<../../.gitbook/assets/image (19) (1).png>)
 
 \
 \

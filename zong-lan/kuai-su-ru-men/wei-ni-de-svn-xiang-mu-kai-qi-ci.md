@@ -10,7 +10,7 @@
 
 #### Step 1 创建空白流水线 <a href="#id-wei-ni-de-svn-xiang-mu-kai-qi-cistep1-chuang-jian-kong-bai-liu-shui-xian" id="id-wei-ni-de-svn-xiang-mu-kai-qi-cistep1-chuang-jian-kong-bai-liu-shui-xian"></a>
 
-![](<../../.gitbook/assets/image (9) (1).png>)
+![](<../../.gitbook/assets/image (9) (1) (1).png>)
 
 #### Step 2  添加触发器：SVN事件触发 <a href="#id-wei-ni-de-svn-xiang-mu-kai-qi-cistep2-tian-jia-chu-fa-qi-svn-shi-jian-chu-fa" id="id-wei-ni-de-svn-xiang-mu-kai-qi-cistep2-tian-jia-chu-fa-qi-svn-shi-jian-chu-fa"></a>
 
@@ -24,7 +24,7 @@
 
 #### Step 3 添加Job，用来执行具体的构建任务 <a href="#id-wei-ni-de-svn-xiang-mu-kai-qi-cistep3-tian-jia-job-yong-lai-zhi-hang-ju-ti-de-gou-jian-ren-wu" id="id-wei-ni-de-svn-xiang-mu-kai-qi-cistep3-tian-jia-job-yong-lai-zhi-hang-ju-ti-de-gou-jian-ren-wu"></a>
 
-![](<../../.gitbook/assets/image (19) (1).png>)
+![](<../../.gitbook/assets/image (19) (1) (1).png>)
 
 #### Step 4 在Job下添加拉取代码插件：[拉取SVN（命令行）](http://devops.oa.com/console/store/atomStore/detail/atom/svnCodeRepo) <a href="#id-wei-ni-de-svn-xiang-mu-kai-qi-cistep4-zai-job-xia-tian-jia-la-qu-dai-ma-cha-jian-la-qu-svn-ming-l" id="id-wei-ni-de-svn-xiang-mu-kai-qi-cistep4-zai-job-xia-tian-jia-la-qu-dai-ma-cha-jian-la-qu-svn-ming-l"></a>
 
@@ -34,14 +34,14 @@
    3. \[必填]支持配置拉取深度
    4. 其他丰富的配置项请参考插件说明
 
-![](<../../.gitbook/assets/image (20) (1).png>)
+![](<../../.gitbook/assets/image (20) (1) (1).png>)
 
 #### Step 5 添加执行构建命令的插件，如：[Bash](http://devops.oa.com/console/store/atomStore/detail/atom/linuxScript) <a href="#id-wei-ni-de-svn-xiang-mu-kai-qi-cistep5-tian-jia-zhi-hang-gou-jian-ming-ling-de-cha-jian-ru-bash" id="id-wei-ni-de-svn-xiang-mu-kai-qi-cistep5-tian-jia-zhi-hang-gou-jian-ming-ling-de-cha-jian-ru-bash"></a>
 
 执行构建命令，将拉取最新代码进行构建
 
-![](<../../.gitbook/assets/image (13) (1).png>)
+![](<../../.gitbook/assets/image (13) (1) (1).png>)
 
 #### Step 6 添加归档构件插件，将构建产物归档到仓库，如：[归档构件](http://devops.oa.com/console/store/atomStore/detail/atom/UploadArtifactory) <a href="#id-wei-ni-de-svn-xiang-mu-kai-qi-cistep6-tian-jia-gui-dang-gou-jian-cha-jian-jiang-gou-jian-chan-wu" id="id-wei-ni-de-svn-xiang-mu-kai-qi-cistep6-tian-jia-gui-dang-gou-jian-cha-jian-jiang-gou-jian-chan-wu"></a>
 
-![](<../../.gitbook/assets/image (15) (1).png>)
+![](<../../.gitbook/assets/image (15) (1) (1).png>)

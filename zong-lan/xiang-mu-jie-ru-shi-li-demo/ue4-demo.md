@@ -77,7 +77,7 @@ mac : [https://www.realvnc.com/download/file/vnc.files/VNC-Server-6.6.0-MacOSX-x
 
 一般的流水线，可能会用到以下插件： 构建环境-MACOS、拉取Git（命令行）/ 拉取SVN（命令行）、IOS证书安装、Bash、iOS企业证书签名并归档(new)、归档构件、版本体验
 
-![](<../../.gitbook/assets/image (15).png>)
+![](<../../.gitbook/assets/image (15) (1).png>)
 
 #### 5.1 构建环境-MACOS <a href="#ue4demo5.1-gou-jian-huan-jing-macos" id="ue4demo5.1-gou-jian-huan-jing-macos"></a>
 
@@ -92,7 +92,7 @@ mac : [https://www.realvnc.com/download/file/vnc.files/VNC-Server-6.6.0-MacOSX-x
 
 拉取 Git 配置里可以指定我们之前关联的代码库，并指定想要构建的分支名称。拉取策略可以根据实际需要选择。
 
-![](<../../.gitbook/assets/image (30).png>)
+![](<../../.gitbook/assets/image (30) (1).png>)
 
 \
 
@@ -101,14 +101,14 @@ mac : [https://www.realvnc.com/download/file/vnc.files/VNC-Server-6.6.0-MacOSX-x
 
 `这里直接调用项目的编译脚本即可。` bash 脚本中用到的一些环境变量，需要在构建触发-流水线变量中提前配置好。\
 \
-![](<../../.gitbook/assets/image (20).png>)\
-![](<../../.gitbook/assets/image (21).png>)
+![](<../../.gitbook/assets/image (20) (1).png>)\
+![](<../../.gitbook/assets/image (21) (1).png>)
 
 #### 5.4 iOS企业证书签名并归档(new) <a href="#ue4demo5.4ios-qi-ye-zheng-shu-qian-ming-bing-gui-dang-new" id="ue4demo5.4ios-qi-ye-zheng-shu-qian-ming-bing-gui-dang-new"></a>
 
 在签名并归档IPA中，证书名称中可下拉选择在证书管理中所配置的企业证书名称。所以需要将 IPA 文件路径相对于 $WORKSPACE 的实际路径
 
-![](<../../.gitbook/assets/image (27).png>)
+![](<../../.gitbook/assets/image (27) (1).png>)
 
 流水线配置完成后点击保存并执行，如果成功则会生成相应的 IPA 安装包。
 
