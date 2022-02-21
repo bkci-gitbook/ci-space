@@ -17,7 +17,7 @@
 * 请确保使用了[tlinux\_ci](http://devops.oa.com/console/store/atomStore/detail/image/tlinux\_ci)镜像，该镜像内已内置了oa.com的证书，可以执行go mod等操作
 * 请不要选择页面上自带的“golang”环境
 
-![](<../../.gitbook/assets/image (17).png>)
+![](<../../.gitbook/assets/image (17) (1).png>)
 
 #### **4. 将密钥通过bash插件写入本地，**[**请参考**](https://iwiki.oa.tencent.com/x/9gZSBQ) <a href="#godemo4.-jiang-mi-yao-tong-guo-bash-cha-jian-xie-ru-ben-di-qing-can-kao" id="godemo4.-jiang-mi-yao-tong-guo-bash-cha-jian-xie-ru-ben-di-qing-can-kao"></a>
 

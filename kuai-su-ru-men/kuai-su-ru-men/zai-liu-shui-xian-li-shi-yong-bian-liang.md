@@ -12,7 +12,7 @@
 
 ### 执行流水线 <a href="#id-zai-liu-shui-xian-li-shi-yong-bian-liang-zhi-hang-liu-shui-xian" id="id-zai-liu-shui-xian-li-shi-yong-bian-liang-zhi-hang-liu-shui-xian"></a>
 
-![](<../../.gitbook/assets/image (3) (1).png>)
+![](<../../.gitbook/assets/image (3) (1) (1).png>)
 
 注意： \
 1.蓝盾流水线变量值可存储最长4000字节内容，超出后该变量将被丢弃，但不影响插件执行成功的状态；\

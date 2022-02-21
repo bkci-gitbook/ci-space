@@ -44,4 +44,4 @@
 
 #### Step 6 添加归档构件插件，将构建产物归档到仓库，如：[归档构件](http://devops.oa.com/console/store/atomStore/detail/atom/UploadArtifactory) <a href="#id-wei-ni-de-svn-xiang-mu-kai-qi-cistep6-tian-jia-gui-dang-gou-jian-cha-jian-jiang-gou-jian-chan-wu" id="id-wei-ni-de-svn-xiang-mu-kai-qi-cistep6-tian-jia-gui-dang-gou-jian-cha-jian-jiang-gou-jian-chan-wu"></a>
 
-![](<../../.gitbook/assets/image (15) (1) (1).png>)
+![](<../../.gitbook/assets/image (15) (1) (1) (1).png>)

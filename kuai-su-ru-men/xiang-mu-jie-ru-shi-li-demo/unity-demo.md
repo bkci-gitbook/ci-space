@@ -31,7 +31,7 @@ mac : [https://www.realvnc.com/download/file/vnc.files/VNC-Server-6.6.0-MacOSX-x
 
 安装好后，建立一个连接，办公网的需要注意取消代理，否则可能出现无法远程连接的情况： 鼠标右键：Properties->Expect->Filter→ProxyTcpRfb设置为False
 
-![](<../../.gitbook/assets/image (33).png>)
+![](<../../.gitbook/assets/image (33) (1).png>)
 
 \
 

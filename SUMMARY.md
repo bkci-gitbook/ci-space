@@ -15,6 +15,7 @@
   * [为你的SVN项目开启CI](kuai-su-ru-men/kuai-su-ru-men/wei-ni-de-svn-xiang-mu-kai-qi-ci.md)
   * [一小时带你玩转蓝盾DevOps - 1](kuai-su-ru-men/kuai-su-ru-men/yi-xiao-shi-dai-ni-wan-zhuan-lan-dun-devops-1.md)
   * [一小时带你玩转蓝盾DevOps - 2](kuai-su-ru-men/kuai-su-ru-men/yi-xiao-shi-dai-ni-wan-zhuan-lan-dun-devops-2.md)
+* [部署](kuai-su-ru-men/bu-shu.md)
 * [项目接入示例demo](kuai-su-ru-men/xiang-mu-jie-ru-shi-li-demo/README.md)
   * [Android Demo](kuai-su-ru-men/xiang-mu-jie-ru-shi-li-demo/android-demo.md)
   * [Go Demo](kuai-su-ru-men/xiang-mu-jie-ru-shi-li-demo/go-demo.md)

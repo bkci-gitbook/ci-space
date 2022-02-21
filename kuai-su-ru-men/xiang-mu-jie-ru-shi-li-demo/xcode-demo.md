@@ -37,7 +37,7 @@ mac : [https://www.realvnc.com/download/file/viewer.files/VNC-Viewer-6.20.529-Ma
 
 在蓝盾选择 服务-部署-环境管理-节点-导入-第三方构建机，根据弹出提示复制 Agent 安装命令，VNC 远程登录到申请的专机上，打开终端 terminal 中运行命令。待 Agent 安装成功后，刷新导入机器即可。
 
-![](<../../.gitbook/assets/image (15).png>)
+![](<../../.gitbook/assets/image (15) (1).png>)
 
 \
 
@@ -82,7 +82,7 @@ ios证书分为： 开发者证书、发布证书、企业签名证书， 对证
 
 一般的流水线，可能会用到以下插件： 构建环境-MACOS、拉取Git（命令行）、IOS证书安装、Bash、iOS企业证书签名并归档(new)、归档构件、版本体验
 
-![](<../../.gitbook/assets/image (35).png>)
+![](<../../.gitbook/assets/image (35) (1).png>)
 
 #### **5.1 构建环境-MACOS** <a href="#xcodedemo5.1-gou-jian-huan-jing-macos" id="xcodedemo5.1-gou-jian-huan-jing-macos"></a>
 

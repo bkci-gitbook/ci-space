@@ -33,7 +33,7 @@ mac : [https://www.realvnc.com/download/file/vnc.files/VNC-Server-6.6.0-MacOSX-x
 
 在蓝盾选择 服务-部署-环境管理-节点-导入-第三方构建机，根据弹出提示复制Agent安装命令，VNC远程登录到申请的专机上，打开终端terminal中运行命令。待Agent安装成功后，刷新导入机器即可。
 
-![](<../../.gitbook/assets/image (3).png>)
+![](<../../.gitbook/assets/image (3) (1).png>)
 
 ### **4. UE4引擎与项目配置部分** <a href="#ue4demo4.ue4-yin-qing-yu-xiang-mu-pei-zhi-bu-fen" id="ue4demo4.ue4-yin-qing-yu-xiang-mu-pei-zhi-bu-fen"></a>
 
@@ -77,7 +77,7 @@ mac : [https://www.realvnc.com/download/file/vnc.files/VNC-Server-6.6.0-MacOSX-x
 
 一般的流水线，可能会用到以下插件： 构建环境-MACOS、拉取Git（命令行）/ 拉取SVN（命令行）、IOS证书安装、Bash、iOS企业证书签名并归档(new)、归档构件、版本体验
 
-![](<../../.gitbook/assets/image (15) (1).png>)
+![](<../../.gitbook/assets/image (15) (1) (1).png>)
 
 #### 5.1 构建环境-MACOS <a href="#ue4demo5.1-gou-jian-huan-jing-macos" id="ue4demo5.1-gou-jian-huan-jing-macos"></a>
 
@@ -108,7 +108,7 @@ mac : [https://www.realvnc.com/download/file/vnc.files/VNC-Server-6.6.0-MacOSX-x
 
 在签名并归档IPA中，证书名称中可下拉选择在证书管理中所配置的企业证书名称。所以需要将 IPA 文件路径相对于 $WORKSPACE 的实际路径
 
-![](<../../.gitbook/assets/image (27) (1).png>)
+![](<../../.gitbook/assets/image (27) (1) (1).png>)
 
 流水线配置完成后点击保存并执行，如果成功则会生成相应的 IPA 安装包。
 

@@ -118,7 +118,7 @@ setEnv 设置的是当前bash的输出参数，在下游才会生效，当前的
 
 查看对应微服务日志 /data/bkce/logs/ci/log/
 
-![](<../../.gitbook/assets/image (17) (1) (1).png>)
+![](<../../.gitbook/assets/image (17) (1) (1) (1).png>)
 
 一个index占了12个shards，超过了es7 设置的shards最大值，这是es7的限制
 
@@ -149,7 +149,7 @@ curl -s -u elastic:$BK_ES7_ADMIN_PASSWORD -X DELETE http://$BK_ES7_IP:9200/index
 
 #### Q:上传镜像报错，程序默认把http方式换成https了
 
-![](<../../.gitbook/assets/image (3) (1) (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (3) (1) (1) (1) (1) (1).png>)
 
 docker默认是https的, 这个要改服务端的docker. 需要在dockerhost机器的/etc/docker/daemon.json添加insecure-registry.
 
@@ -312,7 +312,7 @@ CI 的归档，是将产物暂存到仓库，方便流水线下游操作使用�
 
 #### Q: JOOQ;uncategorized SQLException for SQL
 
-![](<../../.gitbook/assets/image (15) (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (15) (1) (1) (1) (1).png>)
 
 旧sql没有清理的缘故
 
@@ -344,7 +344,7 @@ job脚本执行插件链接：[https://github.com/TencentBlueKing/ci-executeJobS
 
 ![](<../../.gitbook/assets/image (12) (1) (1) (1) (1).png>)
 
-![](<../../.gitbook/assets/image (3) (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (3) (1) (1) (1) (1).png>)
 
 #### Q: 发送邮件插件执行成功，但没收到邮件
 
@@ -353,7 +353,7 @@ job脚本执行插件链接：[https://github.com/TencentBlueKing/ci-executeJobS
 
 #### Q: 发送邮件插件的sender配置不是我配置的sender
 
-![](<../../.gitbook/assets/image (17) (1).png>)
+![](<../../.gitbook/assets/image (17) (1) (1).png>)
 
 sender需要在插件的「私有配置」里设置，独立于ESB的mail\_sender
 
