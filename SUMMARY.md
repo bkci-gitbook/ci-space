@@ -28,7 +28,8 @@
 ## 功能介绍 <a href="#features" id="features"></a>
 
 * [流水线](features/liu-shui-xian.md)
-* [代码检查(codecc)](features/dai-ma-jian-cha-codecc.md)
+* [代码检查(codecc)](features/dai-ma-jian-cha-codecc/README.md)
+  * [硬件要求](features/dai-ma-jian-cha-codecc/ying-jian-yao-qiu.md)
 * [编译加速](features/bian-yi-jia-su.md)
 * [便捷功能](features/bian-jie-gong-neng/README.md)
   * [手游客户端版本体验](features/bian-jie-gong-neng/shou-you-ke-hu-duan-ban-ben-ti-yan.md)
