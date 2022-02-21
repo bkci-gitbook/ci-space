@@ -1,29 +1,29 @@
 # Table of contents
 
 * [首页](README.md)
-  * [5分钟读懂 BKCI 流水线](shou-ye/5-fen-zhong-du-dong-bkci-liu-shui-xian.md)
-  * [BKCI 组件](shou-ye/bkci-zu-jian.md)
-  * [BKCI 系统要求](shou-ye/bkci-xi-tong-yao-qiu.md)
+  * [5分钟读懂 BKCI 流水线](zong-lan/bkci-shi-shi-mo/5-fen-zhong-du-dong-bkci-liu-shui-xian.md)
+  * [BKCI 组件](zong-lan/bkci-shi-shi-mo/bkci-zu-jian.md)
+  * [BKCI 系统要求](zong-lan/bkci-shi-shi-mo/bkci-xi-tong-yao-qiu.md)
 
-## 总 览
+## 快速入门
 
-* [快速入门](zong-lan/kuai-su-ru-men/README.md)
-  * [创建你的第一条流水线](zong-lan/kuai-su-ru-men/chuang-jian-ni-de-di-yi-tiao-liu-shui-xian.md)
-  * [关联你的第一个代码库](zong-lan/kuai-su-ru-men/guan-lian-ni-de-di-yi-ge-dai-ma-ku.md)
-  * [在流水线里使用变量](zong-lan/kuai-su-ru-men/zai-liu-shui-xian-li-shi-yong-bian-liang.md)
-  * [从空白流水线开始](zong-lan/kuai-su-ru-men/cong-kong-bai-liu-shui-xian-kai-shi.md)
-  * [为你的SVN项目开启CI](zong-lan/kuai-su-ru-men/wei-ni-de-svn-xiang-mu-kai-qi-ci.md)
-  * [一小时带你玩转蓝盾DevOps - 1](zong-lan/kuai-su-ru-men/yi-xiao-shi-dai-ni-wan-zhuan-lan-dun-devops-1.md)
-  * [一小时带你玩转蓝盾DevOps - 2](zong-lan/kuai-su-ru-men/yi-xiao-shi-dai-ni-wan-zhuan-lan-dun-devops-2.md)
-* [项目接入示例demo](zong-lan/xiang-mu-jie-ru-shi-li-demo/README.md)
-  * [Android Demo](zong-lan/xiang-mu-jie-ru-shi-li-demo/android-demo.md)
-  * [Go Demo](zong-lan/xiang-mu-jie-ru-shi-li-demo/go-demo.md)
-  * [Java Demo](zong-lan/xiang-mu-jie-ru-shi-li-demo/java-demo.md)
-  * [RPM Demo](zong-lan/xiang-mu-jie-ru-shi-li-demo/rpm-demo.md)
-  * [TKEX Demo](zong-lan/xiang-mu-jie-ru-shi-li-demo/tkex-demo.md)
-  * [UE4 Demo](zong-lan/xiang-mu-jie-ru-shi-li-demo/ue4-demo.md)
-  * [Unity Demo](zong-lan/xiang-mu-jie-ru-shi-li-demo/unity-demo.md)
-  * [XCode Demo](zong-lan/xiang-mu-jie-ru-shi-li-demo/xcode-demo.md)
+* [快速入门](kuai-su-ru-men/kuai-su-ru-men/README.md)
+  * [创建你的第一条流水线](kuai-su-ru-men/kuai-su-ru-men/chuang-jian-ni-de-di-yi-tiao-liu-shui-xian.md)
+  * [关联你的第一个代码库](kuai-su-ru-men/kuai-su-ru-men/guan-lian-ni-de-di-yi-ge-dai-ma-ku.md)
+  * [在流水线里使用变量](kuai-su-ru-men/kuai-su-ru-men/zai-liu-shui-xian-li-shi-yong-bian-liang.md)
+  * [从空白流水线开始](kuai-su-ru-men/kuai-su-ru-men/cong-kong-bai-liu-shui-xian-kai-shi.md)
+  * [为你的SVN项目开启CI](kuai-su-ru-men/kuai-su-ru-men/wei-ni-de-svn-xiang-mu-kai-qi-ci.md)
+  * [一小时带你玩转蓝盾DevOps - 1](kuai-su-ru-men/kuai-su-ru-men/yi-xiao-shi-dai-ni-wan-zhuan-lan-dun-devops-1.md)
+  * [一小时带你玩转蓝盾DevOps - 2](kuai-su-ru-men/kuai-su-ru-men/yi-xiao-shi-dai-ni-wan-zhuan-lan-dun-devops-2.md)
+* [项目接入示例demo](kuai-su-ru-men/xiang-mu-jie-ru-shi-li-demo/README.md)
+  * [Android Demo](kuai-su-ru-men/xiang-mu-jie-ru-shi-li-demo/android-demo.md)
+  * [Go Demo](kuai-su-ru-men/xiang-mu-jie-ru-shi-li-demo/go-demo.md)
+  * [Java Demo](kuai-su-ru-men/xiang-mu-jie-ru-shi-li-demo/java-demo.md)
+  * [RPM Demo](kuai-su-ru-men/xiang-mu-jie-ru-shi-li-demo/rpm-demo.md)
+  * [TKEX Demo](kuai-su-ru-men/xiang-mu-jie-ru-shi-li-demo/tkex-demo.md)
+  * [UE4 Demo](kuai-su-ru-men/xiang-mu-jie-ru-shi-li-demo/ue4-demo.md)
+  * [Unity Demo](kuai-su-ru-men/xiang-mu-jie-ru-shi-li-demo/unity-demo.md)
+  * [XCode Demo](kuai-su-ru-men/xiang-mu-jie-ru-shi-li-demo/xcode-demo.md)
 
 ## 功能介绍 <a href="#features" id="features"></a>
 
