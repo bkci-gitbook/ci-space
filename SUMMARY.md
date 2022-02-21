@@ -27,7 +27,7 @@
 
 ## 功能介绍 <a href="#features" id="features"></a>
 
-* [蓝盾使用文档](features/lan-dun-shi-yong-wen-dang.md)
+* [流水线](features/liu-shui-xian.md)
 * [编译加速](features/bian-yi-jia-su.md)
 * [代码库](features/dai-ma-ku.md)
 * [控制台](features/kong-zhi-tai.md)
