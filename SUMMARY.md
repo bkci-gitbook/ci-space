@@ -35,6 +35,7 @@
 * [控制台](features/kong-zhi-tai.md)
 * [研发商店](features/yan-fa-shang-dian.md)
 * [便捷功能](features/bian-jie-gong-neng/README.md)
+  * [手游客户端版本体验](features/bian-jie-gong-neng/shou-you-ke-hu-duan-ban-ben-ti-yan.md)
   * [docker registry](features/bian-jie-gong-neng/docker-registry.md)
   * [docker in docker](features/bian-jie-gong-neng/docker-in-docker.md)
   * [二维码登录](features/bian-jie-gong-neng/er-wei-ma-deng-lu.md)
