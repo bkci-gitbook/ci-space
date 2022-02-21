@@ -2,7 +2,13 @@
 
 ## 序章：基本概念 <a href="#e5-ba-8f-e7-ab-a0-ef-bc-9a-e5-9f-ba-e6-9c-ac-e6-a6-82-e5-bf-b5" id="e5-ba-8f-e7-ab-a0-ef-bc-9a-e5-9f-ba-e6-9c-ac-e6-a6-82-e5-bf-b5"></a>
 
-首先给大家普及下蓝盾流水线的基本概念，这里能帮助大家在后面的章节更好地理解描述的内容。 ![](https://km.woa.com/gkm/api/img/cos-file-url?url=https%3A%2F%2Fkm-pro-1258638997.cos.ap-guangzhou.myqcloud.com%2Ffiles%2Fphotos%2Fpictures%2F202004%2F1586945643\_43\_w1240\_h572.png\&is\_redirect=1)蓝盾提供可视化的流水线编排页面，里面包含了 Stage、Job、Task结构。\
+首先给大家普及下蓝盾流水线的基本概念，这里能帮助大家在后面的章节更好地理解描述的内容。&#x20;
+
+![](https://km.woa.com/gkm/api/img/cos-file-url?url=https%3A%2F%2Fkm-pro-1258638997.cos.ap-guangzhou.myqcloud.com%2Ffiles%2Fphotos%2Fpictures%2F202004%2F1586945643\_43\_w1240\_h572.png\&is\_redirect=1)
+
+
+
+蓝盾提供可视化的流水线编排页面，里面包含了 Stage、Job、Task结构。\
 **Task（插件）**：单独的任务，如拉取Gitlab仓库代码。\
 **Job（作业）**：运行在一个特定构建环境里。由多个Task组成，且当一个Task失败，则该Job失败，其余Task不再执行。\
 **Stage（阶段）**：由多个Job组成。同个Stage下的Job并行执行，且Job与Job之间相互独立。当一个Job失败，则该Stage失败。\
