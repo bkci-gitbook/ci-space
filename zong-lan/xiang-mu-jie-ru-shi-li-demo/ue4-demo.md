@@ -27,7 +27,7 @@ windows: [https://www.realvnc.com/download/file/viewer.files/VNC-Viewer-6.19.715
 mac : [https://www.realvnc.com/download/file/vnc.files/VNC-Server-6.6.0-MacOSX-x86\_64.pkg](https://www.realvnc.com/download/file/vnc.files/VNC-Server-6.6.0-MacOSX-x86\_64.pkg)
 
 安装好后，建立一个连接，办公网的需要注意取消代理，否则可能出现无法远程连接的情况： 鼠标右键：Properties->Expect->Filter→ProxyTcpRfb 设置为 False\
-![](<../../.gitbook/assets/image (16).png>)
+![](<../../.gitbook/assets/image (16) (1).png>)
 
 导入构建机：
 
@@ -83,7 +83,7 @@ mac : [https://www.realvnc.com/download/file/vnc.files/VNC-Server-6.6.0-MacOSX-x
 
 单击构建环境-MACOS 选项，在右侧会弹出配置栏，在构建资源类型选择 ”第三方构建机--节点“，指定构建资源会提示你自己接入的机器名称和 IP，选中即可。
 
-![](<../../.gitbook/assets/image (26).png>)
+![](<../../.gitbook/assets/image (26) (1).png>)
 
 \
 
@@ -118,4 +118,4 @@ mac : [https://www.realvnc.com/download/file/vnc.files/VNC-Server-6.6.0-MacOSX-x
 
 体验组人员可在权限中心-我的项目-添加用户组中 新增用户组。
 
-![](<../../.gitbook/assets/image (24).png>)
+![](<../../.gitbook/assets/image (24) (1).png>)

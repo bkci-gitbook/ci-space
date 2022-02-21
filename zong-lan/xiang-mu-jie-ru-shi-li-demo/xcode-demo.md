@@ -28,7 +28,7 @@ mac : [https://www.realvnc.com/download/file/viewer.files/VNC-Viewer-6.20.529-Ma
 
 安装好后，建立一个连接，办公网的需要注意取消代理，否则可能出现无法远程连接的情况： 鼠标右键：Properties->Expect->Filter→ProxyTcpRfb 设置为 False
 
-![](<../../.gitbook/assets/image (15).png>)
+![](<../../.gitbook/assets/image (16).png>)
 
 \
 
@@ -37,7 +37,7 @@ mac : [https://www.realvnc.com/download/file/viewer.files/VNC-Viewer-6.20.529-Ma
 
 在蓝盾选择 服务-部署-环境管理-节点-导入-第三方构建机，根据弹出提示复制 Agent 安装命令，VNC 远程登录到申请的专机上，打开终端 terminal 中运行命令。待 Agent 安装成功后，刷新导入机器即可。
 
-![](<../../.gitbook/assets/image (14).png>)
+![](<../../.gitbook/assets/image (15).png>)
 
 \
 
@@ -82,7 +82,7 @@ ios证书分为： 开发者证书、发布证书、企业签名证书， 对证
 
 一般的流水线，可能会用到以下插件： 构建环境-MACOS、拉取Git（命令行）、IOS证书安装、Bash、iOS企业证书签名并归档(new)、归档构件、版本体验
 
-![](<../../.gitbook/assets/image (34).png>)
+![](<../../.gitbook/assets/image (35).png>)
 
 #### **5.1 构建环境-MACOS** <a href="#xcodedemo5.1-gou-jian-huan-jing-macos" id="xcodedemo5.1-gou-jian-huan-jing-macos"></a>
 
@@ -111,7 +111,7 @@ ios证书分为： 开发者证书、发布证书、企业签名证书， 对证
 
 在签名并归档 IPA 中，证书名称中可下拉选择在证书管理中所配置的企业证书名称。所以需要将 IPA 文件路径相对于 $WORKSPACE 的实际路径
 
-![](<../../.gitbook/assets/image (30).png>)
+![](<../../.gitbook/assets/image (31).png>)
 
 \
 

@@ -31,7 +31,7 @@ mac : [https://www.realvnc.com/download/file/vnc.files/VNC-Server-6.6.0-MacOSX-x
 
 安装好后，建立一个连接，办公网的需要注意取消代理，否则可能出现无法远程连接的情况： 鼠标右键：Properties->Expect->Filter→ProxyTcpRfb设置为False
 
-![](<../../.gitbook/assets/image (32).png>)
+![](<../../.gitbook/assets/image (33).png>)
 
 \
 
@@ -138,7 +138,7 @@ ndk: /data/bkdevops/apps/ndk
 
 `这里直接调用项目的编译脚本即可。` bash 脚本中用到的一些环境变量，需要在构建触发-流水线变量中提前配置好。\
 ![](<../../.gitbook/assets/image (13).png>)\
-![](<../../.gitbook/assets/image (33).png>)\
+![](<../../.gitbook/assets/image (34).png>)\
 以下脚本仅做参考：\
 \
 
@@ -248,7 +248,7 @@ ls -ltr ${WORKSPACE}/result
 
 在签名并归档 IPA 中，证书名称中可下拉选择在证书管理中所配置的企业证书名称。所以需要将 IPA 文件路径相对于 $WORKSPACE 的实际路径
 
-![](<../../.gitbook/assets/image (31).png>)
+![](<../../.gitbook/assets/image (32).png>)
 
 流水线配置完成后点击保存并执行，如果成功则会生成相应的 IPA 安装包。
 
