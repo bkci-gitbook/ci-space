@@ -328,7 +328,7 @@ cd ${CTRL_DIR:-/data/install}
 
 #### Q: private configuration of key JOB\_HOST is missing
 
-![](<../../.gitbook/assets/image (12) (1) (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (12) (1) (1) (1) (1) (1).png>)
 
 job脚本执行插件链接：[https://github.com/TencentBlueKing/ci-executeJobScript](https://github.com/TencentBlueKing/ci-executeJobScript)
 
@@ -342,7 +342,7 @@ job脚本执行插件链接：[https://github.com/TencentBlueKing/ci-executeJobS
 
 插件的执行环境分为有编译和无编译，发送邮件插件的执行环境为无编译环境，在创建Job的步骤时，需要选Job类型为无编译环境，即Agentless
 
-![](<../../.gitbook/assets/image (12) (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (12) (1) (1) (1) (1).png>)
 
 ![](<../../.gitbook/assets/image (3) (1) (1) (1).png>)
 

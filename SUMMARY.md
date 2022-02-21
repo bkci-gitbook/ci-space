@@ -1,13 +1,12 @@
 # Table of contents
 
 * [首页](README.md)
+  * [5分钟读懂 BKCI 流水线](shou-ye/5-fen-zhong-du-dong-bkci-liu-shui-xian.md)
+  * [BKCI 组件](shou-ye/bkci-zu-jian.md)
+  * [BKCI 系统要求](shou-ye/bkci-xi-tong-yao-qiu.md)
 
 ## 总 览
 
-* [BKCI 是什么？](zong-lan/bkci-shi-shi-mo/README.md)
-  * [5分钟读懂 BKCI 流水线](zong-lan/bkci-shi-shi-mo/5-fen-zhong-du-dong-bkci-liu-shui-xian.md)
-  * [BKCI 组件](zong-lan/bkci-shi-shi-mo/bkci-zu-jian.md)
-  * [BKCI 系统要求](zong-lan/bkci-shi-shi-mo/bkci-xi-tong-yao-qiu.md)
 * [快速入门](zong-lan/kuai-su-ru-men/README.md)
   * [创建你的第一条流水线](zong-lan/kuai-su-ru-men/chuang-jian-ni-de-di-yi-tiao-liu-shui-xian.md)
   * [关联你的第一个代码库](zong-lan/kuai-su-ru-men/guan-lian-ni-de-di-yi-ge-dai-ma-ku.md)

@@ -56,7 +56,7 @@ ndk: /data/bkdevops/apps/ndk
 
 在蓝盾选择 服务-部署-环境管理-节点-导入-第三方构建机，根据弹出提示复制Agent安装命令，VNC远程登录到申请的专机上，打开终端terminal中运行命令。待Agent安装成功后，刷新导入机器即可。
 
-![](<../../.gitbook/assets/image (12).png>)
+![](<../../.gitbook/assets/image (12) (1).png>)
 
 \
 
