@@ -27,8 +27,7 @@
 
 ## 功能介绍 <a href="#features" id="features"></a>
 
-* [流水线](features/liu-shui-xian/README.md)
-  * [流水线模板](features/liu-shui-xian/liu-shui-xian-mo-ban.md)
+* [蓝盾使用文档](features/lan-dun-shi-yong-wen-dang.md)
 * [编译加速](features/bian-yi-jia-su.md)
 * [代码库](features/dai-ma-ku.md)
 * [控制台](features/kong-zhi-tai.md)
@@ -50,7 +49,6 @@
 ## 使用说明
 
 * [代码检查使用文档](shi-yong-shuo-ming/dai-ma-jian-cha-shi-yong-wen-dang.md)
-* [蓝盾使用文档](shi-yong-shuo-ming/lan-dun-shi-yong-wen-dang.md)
 
 ## 实践案例
 
