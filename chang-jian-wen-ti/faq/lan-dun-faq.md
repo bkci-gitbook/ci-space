@@ -8,7 +8,7 @@ coverY: 0
 
 流水线的状态汇总如下：&#x20;
 
-![](<../../.gitbook/assets/image (2) (1).png>)
+![](<../../.gitbook/assets/image (2) (1) (1).png>)
 
 #### Q: 蓝盾流水线进度条是怎么计算的？
 
@@ -20,7 +20,7 @@ coverY: 0
 
 调整分发源的限速，如下图。 对于已经安装agent的机器，可以先移除，再安装。 分发源机器IP: 192.168.5.134&#x20;
 
-![](<../../.gitbook/assets/image (8) (1) (1).png>)
+![](<../../.gitbook/assets/image (8) (1) (1) (1).png>)
 
 #### Q: 如何获取流水线id？
 
@@ -30,9 +30,9 @@ coverY: 0
 
 项目名称可在项目管理内更改，项目英文缩写（即项目id）不能更改。 &#x20;
 
-![](<../../.gitbook/assets/image (2).png>)
+![](<../../.gitbook/assets/image (2) (1).png>)
 
-![](<../../.gitbook/assets/image (5) (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (5) (1) (1) (1) (1).png>)
 
 #### Q: 流水线执行失败了，插件为什么没有重试按钮？
 
@@ -42,7 +42,7 @@ coverY: 0
 
 有了部署机器，我们可以将构件分发至测试机上了。首先添加一个无编译环境Job 3-1，添加插件作业平台-构件分发并完成配置。&#x20;
 
-![](<../../.gitbook/assets/image (7) (1) (1).png>)
+![](<../../.gitbook/assets/image (7) (1) (1) (1).png>)
 
 #### Q: 蓝盾有哪些全局变量？
 
@@ -52,7 +52,7 @@ https://iwiki.woa.com/pages/viewpage.action?pageId=26941983
 
 查看日志页，Show/Hide Timestamp&#x20;
 
-![](<../../.gitbook/assets/image (4) (1) (1).png>)
+![](<../../.gitbook/assets/image (4) (1) (1) (1).png>)
 
 #### Q: 蓝盾流水线中的视图管理、标签管理有什么用？
 
@@ -62,7 +62,7 @@ https://iwiki.woa.com/pages/viewpage.action?pageId=26941983
 
 存在权限冲突，在用户组权限里，是有多个流水线的权限。 但是自定义里面只有一个流水线的权限。 后续更新版本会修复这个问题。解决方案为删除自定义权限。后续会通过版本更新修复该问题。&#x20;
 
-![](<../../.gitbook/assets/image (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (1) (1) (1) (1).png>)
 
 #### Q: python的环境变量添加后，在job执行的时候未生效。（job报错“系统找不到指定的文件”）
 
@@ -84,7 +84,7 @@ setEnv 设置的是当前bash的输出参数，在下游才会生效，当前的
 
 #### Q: 节点机器，显示正常，为什么监控网络io没有数据？
 
-![](<../../.gitbook/assets/image (9) (1) (1).png>)
+![](<../../.gitbook/assets/image (9) (1) (1) (1).png>)
 
 没有启用. 这个监控并无意义, 也不影响调度. 建议使用蓝鲸监控等专门的监控系统负责.
 
@@ -114,11 +114,11 @@ setEnv 设置的是当前bash的输出参数，在下游才会生效，当前的
 
 #### Q:ci不显示日志
 
-![](<../../.gitbook/assets/image (7) (1).png>)
+![](<../../.gitbook/assets/image (7) (1) (1).png>)
 
 查看对应微服务日志 /data/bkce/logs/ci/log/
 
-![](<../../.gitbook/assets/image (17) (1).png>)
+![](<../../.gitbook/assets/image (17) (1) (1).png>)
 
 一个index占了12个shards，超过了es7 设置的shards最大值，这是es7的限制
 
@@ -133,13 +133,13 @@ curl -s -u elastic:$BK_ES7_ADMIN_PASSWORD -X DELETE http://$BK_ES7_IP:9200/index
 # 注意：不能删除 .security-7
 ```
 
-![](<../../.gitbook/assets/image (16).png>)
+![](<../../.gitbook/assets/image (16) (1).png>)
 
 **另一种可能是用户未安装es7**
 
 #### Q:公共构建机，这几类都支持吗？
 
-![](<../../.gitbook/assets/image (1).png>)
+![](<../../.gitbook/assets/image (1) (1).png>)
 
 公共构建机依赖docker, 只能运行linux. 目前只能运行基于我们 bkci/ci:alpine (debian系统)制作的构建镜像.
 
@@ -149,7 +149,7 @@ curl -s -u elastic:$BK_ES7_ADMIN_PASSWORD -X DELETE http://$BK_ES7_IP:9200/index
 
 #### Q:上传镜像报错，程序默认把http方式换成https了
 
-![](<../../.gitbook/assets/image (3) (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (3) (1) (1) (1) (1).png>)
 
 docker默认是https的, 这个要改服务端的docker. 需要在dockerhost机器的/etc/docker/daemon.json添加insecure-registry.
 
@@ -159,7 +159,7 @@ BKCI这边推送镜像默认都走https，如果要走http需要把仓库域名�
 
 #### Q:no available Docker VM
 
-![](<../../.gitbook/assets/image (11) (1) (1).png>)
+![](<../../.gitbook/assets/image (11) (1) (1) (1).png>)
 
 是没有可用的ci-dockerhost.需要:
 
@@ -179,7 +179,7 @@ BKCI这边推送镜像默认都走https，如果要走http需要把仓库域名�
 
 #### Q: 拉取镜像失败，错误信息：status 500
 
-![](<../../.gitbook/assets/image (19) (1).png>)
+![](<../../.gitbook/assets/image (19) (1) (1).png>)
 
 用户自行配置的仓库，需要先保证网路可达
 
@@ -195,7 +195,7 @@ windows下，agent无法拉起有UI界面的exe
 
 #### Q: failed to connect to gitlib.xxx.com port 443:connection timed out 构建失败 提示连接443端口超时
 
-![](<../../.gitbook/assets/image (13) (1) (1).png>)
+![](<../../.gitbook/assets/image (13) (1) (1) (1).png>)
 
 这里断网的原因是dockerhost启动后, 执行过sysctl -p等价的命令, 导致 net.ipv4.ip\_forward 被重置为0, 导致容器断网.&#x20;
 
@@ -233,7 +233,7 @@ curl -v paas.service.consul
 
 #### Q: 挂载怎么用， 下拉框没数据
 
-![](<../../.gitbook/assets/image (14).png>)
+![](<../../.gitbook/assets/image (14) (1).png>)
 
 这个需要维护一个NFS共享存储服务，不太推荐使用了，后续有可能移除
 
@@ -249,7 +249,7 @@ curl -v paas.service.consul
 
 #### Q: 研发商店：插件配置文件\[task.json]atomCode字段与工作台录入的不一致
 
-![](<../../.gitbook/assets/image (10) (1) (1).png>)
+![](<../../.gitbook/assets/image (10) (1) (1) (1).png>)
 
 上传的，可能不是插件发布包，是源代码。发布过程看插件的readme
 
@@ -257,7 +257,7 @@ curl -v paas.service.consul
 
 #### Q: 插件包上传失败
 
-![](<../../.gitbook/assets/image (8) (1).png>)
+![](<../../.gitbook/assets/image (8) (1) (1).png>)
 
 可以先检查下blueking用户能否正常读写 artifactory数据目录: /data/bkce/public/ci/artifactory/
 
@@ -265,7 +265,7 @@ curl -v paas.service.consul
 
 #### Q: 蓝盾添加节点的时候报错 bkiam v3 failed&#x20;
 
-![](<../../.gitbook/assets/image (1) (1).png>)
+![](<../../.gitbook/assets/image (1) (1) (1).png>)
 
 #### 然后根据给出的文档排查了日志
 
@@ -273,7 +273,7 @@ curl -v paas.service.consul
 
 /data/bkce/ci/environment/logs/auth-devops.log
 
-![](<../../.gitbook/assets/image (6) (1).png>)
+![](<../../.gitbook/assets/image (6) (1) (1).png>)
 
 排查发现ci auth库下的 T\_AUTH\_IAM\_CALLBACK表 为空
 
@@ -312,7 +312,7 @@ CI 的归档，是将产物暂存到仓库，方便流水线下游操作使用�
 
 #### Q: JOOQ;uncategorized SQLException for SQL
 
-![](<../../.gitbook/assets/image (15) (1).png>)
+![](<../../.gitbook/assets/image (15) (1) (1).png>)
 
 旧sql没有清理的缘故
 
@@ -328,7 +328,7 @@ cd ${CTRL_DIR:-/data/install}
 
 #### Q: private configuration of key JOB\_HOST is missing
 
-![](<../../.gitbook/assets/image (12) (1) (1).png>)
+![](<../../.gitbook/assets/image (12) (1) (1) (1).png>)
 
 job脚本执行插件链接：[https://github.com/TencentBlueKing/ci-executeJobScript](https://github.com/TencentBlueKing/ci-executeJobScript)
 
@@ -342,9 +342,9 @@ job脚本执行插件链接：[https://github.com/TencentBlueKing/ci-executeJobS
 
 插件的执行环境分为有编译和无编译，发送邮件插件的执行环境为无编译环境，在创建Job的步骤时，需要选Job类型为无编译环境，即Agentless
 
-![](<../../.gitbook/assets/image (12) (1).png>)
+![](<../../.gitbook/assets/image (12) (1) (1).png>)
 
-![](<../../.gitbook/assets/image (3) (1) (1).png>)
+![](<../../.gitbook/assets/image (3) (1) (1) (1).png>)
 
 #### Q: 发送邮件插件执行成功，但没收到邮件
 
@@ -353,7 +353,7 @@ job脚本执行插件链接：[https://github.com/TencentBlueKing/ci-executeJobS
 
 #### Q: 发送邮件插件的sender配置不是我配置的sender
 
-![](<../../.gitbook/assets/image (17).png>)
+![](<../../.gitbook/assets/image (17) (1).png>)
 
 sender需要在插件的「私有配置」里设置，独立于ESB的mail\_sender
 
@@ -388,7 +388,7 @@ sender需要在插件的「私有配置」里设置，独立于ESB的mail\_sende
 
 #### Q: 怎么使用Merge-Request-Accept-Hook，我的怎么没触发？我希望分支feature\_lzj\_test123123213合并到feature\_lzj\_test0117时触发流水线
 
-![](<../../.gitbook/assets/image (9) (1).png>)
+![](<../../.gitbook/assets/image (9) (1) (1).png>)
 
 Merge Request Accept Hook会在源分支**成功merge到目标分支时触发**
 

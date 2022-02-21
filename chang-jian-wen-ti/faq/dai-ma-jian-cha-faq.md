@@ -28,7 +28,7 @@ description: codecc
 
 **Q: 一些类里面的std::string，我们希望他是不变的一个const static变量，但是目前代码检测说不可以，必须是const char\*。这个规则不太理解，怎么找到规则背后的原理？**
 
-![](<../../.gitbook/assets/image (11) (1).png>)
+![](<../../.gitbook/assets/image (11) (1) (1).png>)
 
 codecc的cpplint规则是基于Google C++代码规范的，可以参考[https://google.github.io/styleguide/cppguide.html#Names\_and\_Order\_of\_Includes](https://google.github.io/styleguide/cppguide.html#Names\_and\_Order\_of\_Includes) ，这里的问题是fstream作为c++的系统头文件，include顺序应放在如boost/\*等第三方引入之前
 

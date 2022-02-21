@@ -17,6 +17,13 @@
   * [为你的SVN项目开启CI](zong-lan/kuai-su-ru-men/wei-ni-de-svn-xiang-mu-kai-qi-ci.md)
   * [一小时带你玩转蓝盾DevOps - 1](zong-lan/kuai-su-ru-men/yi-xiao-shi-dai-ni-wan-zhuan-lan-dun-devops-1.md)
   * [一小时带你玩转蓝盾DevOps - 2](zong-lan/kuai-su-ru-men/yi-xiao-shi-dai-ni-wan-zhuan-lan-dun-devops-2.md)
+* [项目接入示例demo](zong-lan/xiang-mu-jie-ru-shi-li-demo/README.md)
+  * [Android Demo](zong-lan/xiang-mu-jie-ru-shi-li-demo/android-demo.md)
+  * [Go Demo](zong-lan/xiang-mu-jie-ru-shi-li-demo/go-demo.md)
+  * [Java Demo](zong-lan/xiang-mu-jie-ru-shi-li-demo/java-demo.md)
+  * [RPM Demo](zong-lan/xiang-mu-jie-ru-shi-li-demo/rpm-demo.md)
+  * [TKEX Demo](zong-lan/xiang-mu-jie-ru-shi-li-demo/tkex-demo.md)
+  * [UE4 Demo](zong-lan/xiang-mu-jie-ru-shi-li-demo/ue4-demo.md)
 
 ## 功能介绍 <a href="#features" id="features"></a>
 

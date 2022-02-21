@@ -8,7 +8,7 @@
 
 #### 新建流水线
 
-![](<../.gitbook/assets/image (5) (1).png>)
+![](<../.gitbook/assets/image (5) (1) (1).png>)
 
 建立空白流水线，使用模板新建流水线的方式参考步骤xxx
 
