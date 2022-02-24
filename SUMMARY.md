@@ -1,9 +1,33 @@
 # Table of contents
 
-* [BKCI - 蓝盾](README.md)
+## 🐤 了解基本概念 <a href="#overview" id="overview"></a>
+
+* [BKCI 是什么？](overview/what-is-bkci.md)
+* [BKCI 组件](overview/components.md)
+* [5分钟读懂 BKCI 流水线](overview/learn-pipeline-in-5-min.md)
+* [术语解释](overview/terminology/README.md)
+  * [Pipelines](overview/terminology/pipelines.md)
+  * [Stage](overview/terminology/stage.md)
+  * [Job](overview/terminology/job.md)
+  * [Task](overview/terminology/task.md)
+  * [Trigger](overview/terminology/trigger/README.md)
+    * [github事件触发](overview/terminology/trigger/github.md)
+  * [Variables](overview/terminology/variables.md)
+* ----[BKCI - 蓝盾](README.md)
   * [5分钟读懂 BKCI 流水线](bkci-lan-dun/5-fen-zhong-du-dong-bkci-liu-shui-xian.md)
   * [BKCI 组件](bkci-lan-dun/bkci-zu-jian.md)
   * [BKCI 系统要求](bkci-lan-dun/bkci-xi-tong-yao-qiu.md)
+
+
+## 👉 使用 BKCI <a href="#tutorials" id="tutorials"></a>
+
+* [创建你的第一条流水线](tutorials/create-first-pipeline.md)
+* [关联你的第一个代码库](tutorials/link-first-repo.md)
+* [为你的Git工程开启CI](tutorials/enable-git-ci.md)
+* [示例](tutorials/examples/README.md)
+  * [Java Maven Demo](tutorials/examples/java-maven-demo.md)
+  * [Node Demo](tutorials/examples/node-demo.md)
+
 
 ## 快速入门
 
@@ -26,61 +50,6 @@
   * [Unity Demo](kuai-su-ru-men/xiang-mu-jie-ru-shi-li-demo/unity-demo.md)
   * [XCode Demo](kuai-su-ru-men/xiang-mu-jie-ru-shi-li-demo/xcode-demo.md)
 
-## 功能介绍 <a href="#features" id="features"></a>
-
-* [流水线](features/liu-shui-xian.md)
-* [代码检查(codecc)](features/dai-ma-jian-cha-codecc/README.md)
-  * [硬件要求](features/dai-ma-jian-cha-codecc/ying-jian-yao-qiu.md)
-* [编译加速](features/bian-yi-jia-su.md)
-* [便捷功能](features/bian-jie-gong-neng/README.md)
-  * [手游客户端版本体验](features/bian-jie-gong-neng/shou-you-ke-hu-duan-ban-ben-ti-yan.md)
-  * [docker registry](features/bian-jie-gong-neng/docker-registry.md)
-  * [docker in docker](features/bian-jie-gong-neng/docker-in-docker.md)
-  * [二维码登录](features/bian-jie-gong-neng/er-wei-ma-deng-lu.md)
-  * [通讯录同步](features/bian-jie-gong-neng/tong-xun-lu-tong-bu.md)
-  * [自更新](features/bian-jie-gong-neng/zi-geng-xin.md)
-  * [自监控](features/bian-jie-gong-neng/zi-jian-kong.md)
-  * [凭证管理](features/bian-jie-gong-neng/ping-zheng-guan-li.md)
-  * [钉钉消息通知插件](features/bian-jie-gong-neng/ding-ding-xiao-xi-tong-zhi-cha-jian.md)
-  * [通用消息发送插件](features/bian-jie-gong-neng/tong-yong-xiao-xi-fa-song-cha-jian.md)
-* [代码库](features/dai-ma-ku.md)
-* [控制台](features/kong-zhi-tai.md)
-* [研发商店](features/yan-fa-shang-dian.md)
-* [术语解释](features/shu-yu-jie-shi.md)
-
-## 常见问题
-
-* [已知问题](chang-jian-wen-ti/yi-zhi-wen-ti.md)
-* [FAQ](chang-jian-wen-ti/faq/README.md)
-  * [蓝盾FAQ](chang-jian-wen-ti/faq/lan-dun-faq.md)
-  * [代码检查FAQ](chang-jian-wen-ti/faq/dai-ma-jian-cha-faq.md)
-  * [编译加速FAQ](chang-jian-wen-ti/faq/bian-yi-jia-su-faq.md)
-  * [蓝鲸FAQ](chang-jian-wen-ti/faq/lan-jing-faq.md)
-
-* [首页](README.md)
-
-## 🐤 了解基本概念 <a href="#overview" id="overview"></a>
-
-* [BKCI 是什么？](overview/what-is-bkci.md)
-* [BKCI 组件](overview/components.md)
-* [5分钟读懂 BKCI 流水线](overview/learn-pipeline-in-5-min.md)
-* [术语解释](overview/terminology/README.md)
-  * [Pipelines](overview/terminology/pipelines.md)
-  * [Stage](overview/terminology/stage.md)
-  * [Job](overview/terminology/job.md)
-  * [Task](overview/terminology/task.md)
-  * [Trigger](overview/terminology/trigger/README.md)
-    * [github事件触发](overview/terminology/trigger/github.md)
-  * [Variables](overview/terminology/variables.md)
-
-## 👉 使用 BKCI <a href="#tutorials" id="tutorials"></a>
-
-* [创建你的第一条流水线](tutorials/create-first-pipeline.md)
-* [关联你的第一个代码库](tutorials/link-first-repo.md)
-* [为你的Git工程开启CI](tutorials/enable-git-ci.md)
-* [示例](tutorials/examples/README.md)
-  * [Java Maven Demo](tutorials/examples/java-maven-demo.md)
-  * [Node Demo](tutorials/examples/node-demo.md)
 
 ## 🚀 部署 BKCI <a href="#setup" id="setup"></a>
 
@@ -116,6 +85,29 @@
     * [定制Linux C/C++加速方案](services/turbo/linux\_c\_c++/new\_plan.md)
     * [在流水线中进行编译加速](services/turbo/linux\_c\_c++/use\_in\_pipeline.md)
     * [在私有构建机上使用加速](services/turbo/linux\_c\_c++/use\_in\_local.md)
+
+
+## 功能介绍 <a href="#features" id="features"></a>
+
+* [流水线](features/liu-shui-xian.md)
+* [代码检查(codecc)](features/dai-ma-jian-cha-codecc/README.md)
+  * [硬件要求](features/dai-ma-jian-cha-codecc/ying-jian-yao-qiu.md)
+* [编译加速](features/bian-yi-jia-su.md)
+* [便捷功能](features/bian-jie-gong-neng/README.md)
+  * [手游客户端版本体验](features/bian-jie-gong-neng/shou-you-ke-hu-duan-ban-ben-ti-yan.md)
+  * [docker registry](features/bian-jie-gong-neng/docker-registry.md)
+  * [docker in docker](features/bian-jie-gong-neng/docker-in-docker.md)
+  * [二维码登录](features/bian-jie-gong-neng/er-wei-ma-deng-lu.md)
+  * [通讯录同步](features/bian-jie-gong-neng/tong-xun-lu-tong-bu.md)
+  * [自更新](features/bian-jie-gong-neng/zi-geng-xin.md)
+  * [自监控](features/bian-jie-gong-neng/zi-jian-kong.md)
+  * [凭证管理](features/bian-jie-gong-neng/ping-zheng-guan-li.md)
+  * [钉钉消息通知插件](features/bian-jie-gong-neng/ding-ding-xiao-xi-tong-zhi-cha-jian.md)
+  * [通用消息发送插件](features/bian-jie-gong-neng/tong-yong-xiao-xi-fa-song-cha-jian.md)
+* [代码库](features/dai-ma-ku.md)
+* [控制台](features/kong-zhi-tai.md)
+* [研发商店](features/yan-fa-shang-dian.md)
+* [术语解释](features/shu-yu-jie-shi.md)
 
 ## 🏪 研发商店 <a href="#store" id="store"></a>
 
@@ -292,8 +284,27 @@
 * [FAQS](reference/faqs/README.md)
   * [gitlab事件触发插件无法触发事件?](reference/faqs/gitlab-not-trigger.md)
   * [如何让自己的流水线日志显示带上不同颜色](reference/faqs/log-colors.md)
+  * [蓝盾FAQ](chang-jian-wen-ti/faq/lan-dun-faq.md)
+  * [代码检查FAQ](chang-jian-wen-ti/faq/dai-ma-jian-cha-faq.md)
+  * [编译加速FAQ](chang-jian-wen-ti/faq/bian-yi-jia-su-faq.md)
+  * [蓝鲸FAQ](chang-jian-wen-ti/faq/lan-jing-faq.md)
+  * [已知问题](chang-jian-wen-ti/yi-zhi-wen-ti.md)
+  * [FAQ](chang-jian-wen-ti/faq/README.md)
 * [系统限制](reference/limit/README.md)
   * [流水线复杂度限制](reference/limit/pipeline-limit.md)
+
+
+
+
+
+
+
+
+
+
+
+
+* [首页](README.md)
 
 ***
 
