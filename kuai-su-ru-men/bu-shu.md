@@ -9,7 +9,7 @@
 
 ### 蓝盾部署（使用标准运维）
 
-\
+
 [https://bk.tencent.com/docs/document/6.0/127/7539](https://bk.tencent.com/docs/document/6.0/127/7539)
 
 蓝盾标准运维模板使用如下文件
